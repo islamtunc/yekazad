@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     default: " Yekazad Software Center",
   },
   description: " Yazılım ve teknoloji çözümleri sunan Yekazad Software Center, web uygulamaları, mobil uygulamalar ve yapay zeka çözümleri ile işinizi ileri taşıyor.",
+  keywords: ["Yazılım", "İslam tunç", "Ağrı","web sitesi","uygulama","yapay zeka ",Android","iPhone","telefoncu","bilgisayarcı"],
 };
 
 export default function RootLayout({
