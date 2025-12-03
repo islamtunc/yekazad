@@ -8,6 +8,10 @@
 // Estağfirullah El-Azim
 // La ilahe illallah, Muhammedur Resulullah
 import React from 'react'
+import Mmavahi from './mmavahi/ForYouFeed'
+import Mmhewcedari from './mmhewcedari/ForYouFeed'
+import Mmkargeh from './mmkargeh/ForYouFeed'
+import Card from "react-bootstrap"
 
 function page() {
   return (
@@ -69,6 +73,15 @@ function page() {
             <li>The special Kurdish  AI asisstan Feqi is <a href='https:feqi.vercel.app'>here</a>.</li>
           </ul>
         </div>
+
+
+
+        <Card>
+
+          <Mmavahi/>
+          <Mmhewcedari/>
+          <Mmkargeh/>
+        </Card>
       </main>
     </>
   )
