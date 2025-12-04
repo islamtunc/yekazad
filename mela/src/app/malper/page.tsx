@@ -11,7 +11,6 @@ import React from 'react'
 import Mmavahi from './mmavahi/ForYouFeed'
 import Mmhewcedari from './mmhewcedari/ForYouFeed'
 import Mmkargeh from './mmkargeh/ForYouFeed'
-import Card from "react-bootstrap"
 
 function page() {
   return (
@@ -76,12 +75,12 @@ function page() {
 
 
 
-        <Card>
+        <>
 
           <Mmavahi/>
           <Mmhewcedari/>
           <Mmkargeh/>
-        </Card>
+        </>
       </main>
     </>
   )
