@@ -1,13 +1,13 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
-// Ve salatu ve selamu ala resulina Muhammedin ve alihi ve sahbihi ecmain
+// Ve salatu ve selamu ala resulina Muhammedin 
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
 // Estağfirullah El-Azim
 
 "use client";
 import React from "react";
-import { Card, Row, Col, Alert } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 
 function page() {
@@ -17,79 +17,79 @@ function page() {
         backgroundColor: "#f8f9fa",
         minHeight: "100vh",
         display: "flex",
-        flexDirection: "column", // mobilde dikey hizalama
+        flexDirection: "column",
         alignItems: "center",
-        padding: "10px",
+        padding: "12px",
       }}
     >
       <Card
         style={{
-          opacity: 0.97,
+          opacity: 0.98,
           color: "black",
           textAlign: "center",
-          maxWidth: "700px",
+          maxWidth: "640px",
           width: "100%",
           margin: "0 auto",
         }}
       >
         <Card.Body>
-          <Card.Title style={{ fontSize: "1.5rem" }}>Sporcu Beslenmesi</Card.Title>
-          <Row className="g-4">
-            {/* Sol Kolon */}
-            <Col xs={12} md={6} className="mb-3 mb-md-0">
-              <Card style={{ textAlign: "center", height: "100%" }}>
+          <Card.Title style={{ fontSize: "1.4rem" }}>
+            Sepandina Mobîl û Xizmetên Nermalavê
+          </Card.Title>
+          <Row className="g-3">
+            {/* Çep / mobîl ser rêzê derdikeve */}
+            <Col xs={12} className="mb-2">
+              <Card style={{ textAlign: "left" }}>
                 <Card.Body>
-                  <Card.Title style={{ fontSize: "1.1rem" }}>Sporcularda beslenmenin önemi</Card.Title>
-                  <Card.Text style={{ fontSize: "1rem" }}>
-                    <br />
-                    Sporcularda beslenme, performansın artırılması, toparlanma
-                    sürecinin hızlandırılması ve genel sağlığın korunması
-                    açısından kritik bir rol oynamaktadır. Son dönem
-                    araştırmalar, beslenmenin sadece enerji alımı değil, aynı
-                    zamanda antrenman adaptasyonu, bağışıklık sistemi desteği ve
-                    zihinsel dayanıklılık üzerinde de etkili olduğunu
-                    göstermektedir.
+                  <Card.Title style={{ fontSize: "1.05rem" }}>
+                    Çarên mobîl bo kar û bazirganî
+                  </Card.Title>
+                  <Card.Text style={{ fontSize: "0.98rem", lineHeight: 1.5 }}>
+                    Wek Yekazad Software Center em sepandinên mobîl ji bo Android û
+                    iOS amade dikin. Xizmetên me bi responsîvîtiyê, perfomance û
+                    tecrûbeya bikarhênerê (UX) têne çêkirin.
                     <br />
                     <br />
-                    <strong>Makro ve Mikro Besinlerin Önemi</strong>
+                    <strong>Xizmetên mobîl</strong>
                     <br />
-                    Sporcuların enerji ve protein ihtiyaçları, sedanter
-                    bireylere göre daha fazladır. Bu nedenle karbonhidrat,
-                    protein ve yağ gibi makro besin ögelerinin dengeli alımı
-                    önemlidir. Ayrıca, vitamin ve mineral gibi mikro besin
-                    ögeleri de performans ve toparlanma süreçlerinde kritik rol
-                    oynar.
+                    • Sepandina serhêl a mobîl (Native & cross-platform)  
+                    • Integrasyona API û backend (Node, Next.js, REST/GraphQL)  
+                    • Têkildana payment û auth (OAuth, JWT, payment gateways)  
+                    • Pêşkêşkirina CI/CD, test û deploy (Play Store / App Store)  
+                    • Dema piştgirî û nûvekirinên amûrî (maintenance & updates)
                     <br />
                     <br />
-                    <strong>Sonuç</strong>
+                    <strong>Çawa dest pê bikin?</strong>
                     <br />
-                    Sporcularda beslenme, sadece fiziksel performansı değil,
-                    aynı zamanda genel sağlığı, zihinsel dayanıklılığı ve uzun
-                    vadeli başarıyı etkileyen temel bir faktördür.
+                    1. Armancên xwe bêje: kîjan taybetmendî hene, hedef çi ye?  
+                    2. Pêdivîyên teknîkî û peyman diyar bikin — em plan û demjimarê amade dikin.  
+                    3. Prototip û test: demo û testên bikarhênerî pêşkêş dikin.  
+                    4. Deploy û monitoring: app li firoşgehan weşandin û performans kontrol kirin.
+                    <br />
+                    <br />
+                    Ji bo destpêkê formek li malperê tije bikin an jî rastî bi me re têkilî daynin.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
-            {/* Sağ Kolon */}
-            <Col xs={12} md={6} className="d-flex align-items-center">
+
+            {/* Wêne - mobîl jêr nîşan dide */}
+            <Col xs={12} className="d-flex align-items-center">
               <Image
-                src="https://iasbh.tmgrup.com.tr/a9e335/0/0/0/0/0/0?u=https://isbh.tmgrup.com.tr/sb/album/2021/12/11/tum-beslenmeniz-degisiyor-iste-saat-1600dan-sonra-asla-tuketmemeniz-gereken-o-besin-1639200626070.jpg&mw=752&mh=700"
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
                 style={{
-                  border: "5px solid white",
+                  border: "4px solid white",
                   borderRadius: "10px",
                   width: "100%",
                   height: "auto",
-                  marginBottom: "10px",
                 }}
-                alt="ROJDA MUSA"
+                alt="Nimûne: sepandina mobîl"
                 fluid
               />
             </Col>
           </Row>
         </Card.Body>
       </Card>
-      {/* Alert ve ForYouFeed Alt Kısma Taşındı */}
-     
     </div>
   );
 }

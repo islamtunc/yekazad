@@ -1,13 +1,13 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
-// Ve salatu ve selamu ala resulina Muhammedin ve alihi ve sahbihi ecmain
+// Ve salatu ve selamu ala resulina Muhammedin 
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
 // Estağfirullah El-Azim
 
 "use client";
 import React from "react";
-import { Card, Row, Col, Alert } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import ForYouFeed from "./ForYouFeed";
 
@@ -18,7 +18,7 @@ function page() {
         backgroundColor: "#f8f9fa",
         minHeight: "100vh",
         display: "flex",
-        flexDirection: "column", // mobilde dikey hizalama
+        flexDirection: "column",
         alignItems: "center",
         padding: "10px",
       }}
@@ -28,53 +28,63 @@ function page() {
           opacity: 0.97,
           color: "black",
           textAlign: "center",
-          maxWidth: "700px",
+          maxWidth: "900px",
           width: "100%",
           margin: "0 auto",
         }}
       >
         <Card.Body>
-          <Card.Title style={{ fontSize: "1.5rem" }}>Sporcu Beslenmesi</Card.Title>
+          <Card.Title style={{ fontSize: "1.5rem" }}>
+            Xizmetên Malper û Nermalav
+          </Card.Title>
           <Row className="g-4">
-            {/* Sol Kolon */}
+            {/* Çep Kolon */}
             <Col xs={12} md={6} className="mb-3 mb-md-0">
-              <Card style={{ textAlign: "center", height: "100%" }}>
+              <Card style={{ textAlign: "left", height: "100%" }}>
                 <Card.Body>
-                  <Card.Title style={{ fontSize: "1.1rem" }}>Sporcularda beslenmenin önemi</Card.Title>
+                  <Card.Title style={{ fontSize: "1.1rem" }}>
+                    Bi çarên profesyonel pergala dijîtala xwe pêşve bîne
+                  </Card.Title>
                   <Card.Text style={{ fontSize: "1rem" }}>
                     <br />
-                    Sporcularda beslenme, performansın artırılması, toparlanma
-                    sürecinin hızlandırılması ve genel sağlığın korunması
-                    açısından kritik bir rol oynamaktadır. Son dönem
-                    araştırmalar, beslenmenin sadece enerji alımı değil, aynı
-                    zamanda antrenman adaptasyonu, bağışıklık sistemi desteği ve
-                    zihinsel dayanıklılık üzerinde de etkili olduğunu
-                    göstermektedir.
+                    Wek Yekazad Software Center em malperên şîrketî, çarên
+                    firotina serhêl, sepandinên mobîl û têkildanên zêhniya
+                    sernavîn (AI) pêşkêş dikin. Projeyên me responsive ne,
+                    li ser performance fokus dikin û bi SEO re hevbe.
                     <br />
                     <br />
-                    <strong>Makro ve Mikro Besinlerin Önemi</strong>
+                    <strong>Xizmetên me</strong>
                     <br />
-                    Sporcuların enerji ve protein ihtiyaçları, sedanter
-                    bireylere göre daha fazladır. Bu nedenle karbonhidrat,
-                    protein ve yağ gibi makro besin ögelerinin dengeli alımı
-                    önemlidir. Ayrıca, vitamin ve mineral gibi mikro besin
-                    ögeleri de performans ve toparlanma süreçlerinde kritik rol
-                    oynar.
+                    • Pêşkeftina malperê (React, Next.js, têkildanên CMS)
+                    <br />
+                    • Pêşkeftina sepandina mobîl (Android / iOS)
+                    <br />
+                    • Çarên firotina serhêl û têkildanên payment
+                    <br />
+                    • Taybetmendiyên piştgirîkirî ji AI û automatîzasyon
+                    <br />
+                    • Xizmeta domdar, ewlekariyê û optimîzasyona performance
                     <br />
                     <br />
-                    <strong>Sonuç</strong>
+                    <strong>Çawa dest pê bikin?</strong>
                     <br />
-                    Sporcularda beslenme, sadece fiziksel performansı değil,
-                    aynı zamanda genel sağlığı, zihinsel dayanıklılığı ve uzun
-                    vadeli başarıyı etkileyen temel bir faktördür.
+                    Armancên projeyê xwe bi me re parve bikin; piştî anîlîza
+                    pêdivîyan û peymanê em zû dest bi pêşkeftinê dikin. Em
+                    mobîl-hez û barkirina zû pêşî dikarin da ku tecrûbeya
+                    bikarhêneran baş be.
+                    <br />
+                    <br />
+                    Ji bo peyam û teklîf, li ser malper formê tije bikin an
+                    rastî bi me re têkilî daynin.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
-            {/* Sağ Kolon */}
+
+            {/* Rast Kolon */}
             <Col xs={12} md={6} className="d-flex align-items-center">
               <Image
-                src="https://iasbh.tmgrup.com.tr/a9e335/0/0/0/0/0/0?u=https://isbh.tmgrup.com.tr/sb/album/2021/12/11/tum-beslenmeniz-degisiyor-iste-saat-1600dan-sonra-asla-tuketmemeniz-gereken-o-besin-1639200626070.jpg&mw=752&mh=700"
+                src="https://images.unsplash.com/photo-1526378725407-9d3b7d4d1b3b?auto=format&fit=crop&w=800&q=80"
                 style={{
                   border: "5px solid white",
                   borderRadius: "10px",
@@ -82,15 +92,18 @@ function page() {
                   height: "auto",
                   marginBottom: "10px",
                 }}
-                alt="ROJDA MUSA"
+                alt="Nîşanî pêşkeftina malperê"
                 fluid
               />
             </Col>
           </Row>
         </Card.Body>
       </Card>
-      {/* Alert ve ForYouFeed Alt Kısma Taşındı */}
-     
+
+      {/* Nivîsar/flux */}
+      <div style={{ maxWidth: "900px", width: "100%", marginTop: 20 }}>
+        <ForYouFeed />
+      </div>
     </div>
   );
 }
