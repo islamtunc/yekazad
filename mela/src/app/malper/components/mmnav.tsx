@@ -1,11 +1,12 @@
 // Bismillahirrahmanirrahim
 // Elhamdulillahirabbulalemin
-// Ve salatu ve selamu ala resulina Muhammedin ve alihi ve sahbihi ecmain
+// Ve salatu ve selamu ala resulina Muhammedin 
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
 // Estağfirullah El-Azim
 "use client"
 
+import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -114,6 +115,7 @@ Mobile
               </NavDropdown.Item>
             </NavDropdown>
 
+<Button href="/login">Bibe Endam</Button>
             <Nav.Link href="/malper/mmmmm">About Us</Nav.Link>
 
           </Nav>
