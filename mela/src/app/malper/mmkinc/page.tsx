@@ -53,7 +53,7 @@ function page() {
                     Rêbendanên sereke:
                     <br />
                     • Fork + branch: bikar bînin navê branch wekî
-                    feat/<tema>-navê an fix/<issue>-navê.
+                    feat/&lt;tema&gt;-navê an fix/&lt;issue&gt;-navê.
                     <br />
                     • Test & lint: pêdivî ye ku hemî testên unit û lint
                     bêne derbas kirin. npm run test / npm run lint.
@@ -67,7 +67,7 @@ function page() {
                     <br />
                     Çawa proje li localê bikevin:
                     <br />
-                    1) git clone <repo-url>
+                    1) git clone &lt;repo-url&gt;
                     <br />
                     2) cp .env.example .env && .env de vebijêrkên xwe danîn
                     <br />
