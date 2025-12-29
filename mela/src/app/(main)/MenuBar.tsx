@@ -1,6 +1,6 @@
 // Bismillahirrahmanirrahim 
 // Elhamdulillahirabbulalemin
-// Esselatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Esselatu vesselamu ala rasulina Muhammedin 
 // Suphanallah, Elhamdulillah, Allahu Ekber
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 
@@ -35,7 +35,7 @@ export default async function MenuBar({ className }: MenuBarProps) {
       >
         <Link href="/">
           <Home />
-          <span className="hidden lg:inline">Home</span>
+          <span className="hidden lg:inline">ANASAYFA</span>
         </Link>
       </Button>
     
