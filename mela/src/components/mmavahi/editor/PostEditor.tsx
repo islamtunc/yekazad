@@ -18,7 +18,7 @@ import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { useDropzone } from "@uploadthing/react";
 import { ImageIcon, Loader2, X } from "lucide-react";
-import { useSubmitPostMutation } from "mutations";
+import { useSubmitPostMutation } from "./mutations";
 import React, { ClipboardEvent, useRef, useState } from "react";
 import useMediaUpload, { Attachment } from "./useMediaUpload";
 
