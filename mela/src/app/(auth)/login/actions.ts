@@ -56,7 +56,10 @@ export async function login(
       sessionCookie.attributes,
     );
 
-    return redirect("/");
+    // Redirect based on role: admins -> "/", regular users -> "/bikarhn"
+        const isAdmin = existingUser.role === "ADMIN";
+    
+        return redirect(isAdmin ? "/" : "/bikarh");
   } catch (error) {
     if (isRedirectError(error)) throw error;
     console.error(error);
