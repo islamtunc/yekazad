@@ -17,6 +17,11 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
+enum Role {
+  USER
+  ADMIN
+}
+
 model User {
   id                    String         @id
   username              String         @unique
@@ -38,6 +43,8 @@ model User {
   Mmwesayit   Mmwesayit[]
   Mmkargeh    Mmkargeh[]
   Mmhuner     Mmhuner[]
+  role                  Role           @default(USER)
+  disabled              Boolean         @default(false)
   @@map("users")
 }
 

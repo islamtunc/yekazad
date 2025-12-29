@@ -1,6 +1,6 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirrabbulalemin
-// Esselatu vesselamu ala seyyidina Muhammedin ve ala alihi ve sahbihi ecmain
+// Esselatu vesselamu ala seyyidina Muhammedin 
 // Subhanallah, Elhamdulillah, Allahu Ekber
 // La ilahe illallah 
 // Allahu Ekber, Allahu Ekber, Allahu Ekber, La ilahe illallah
@@ -14,6 +14,7 @@ import { Lucia, Session, User } from "lucia";
 import { cookies } from "next/headers";
 import { cache } from "react";
 import prisma from "./lib/prisma";
+import { NextResponse } from "next/server";
 
 const adapter = new PrismaAdapter(prisma.session, prisma.user);
 
@@ -93,3 +94,27 @@ export const validateRequest = cache(
     return result;
   },
 );
+
+export async function getCurrentDbUser() {
+  const result = await validateRequest();
+  if (!result.user) return null;
+  const userId = (result.user as any)?.userId ?? (result.user as any)?.id;
+  if (!userId) return null;
+  const dbUser = await prisma.user.findUnique({ where: { id: userId } });
+  return dbUser;
+}
+
+export async function requireRole(requiredRole: "ADMIN" | "USER") {
+  const dbUser = await getCurrentDbUser();
+  if (!dbUser) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  if (requiredRole === "ADMIN" && dbUser.role !== "ADMIN") {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+  return dbUser;
+}
+
+export async function requireAdmin() {
+  return requireRole("ADMIN");
+}

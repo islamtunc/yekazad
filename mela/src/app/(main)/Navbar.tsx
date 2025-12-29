@@ -1,6 +1,6 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
-// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Es-selatu vesselamu ala rasulina Muhammedin 
 // La ilahe illallah, Muhammedur Resulullah
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
@@ -64,7 +64,7 @@ export default function Navbar() {
             Dashboard
           </Link>
           <Link
-            href="/users"
+            href="/mmbikarh"
             className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center"
             onClick={() => setMenuOpen(false)}
           >
