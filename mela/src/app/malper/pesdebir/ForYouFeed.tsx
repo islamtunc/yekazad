@@ -1,6 +1,6 @@
 // Bismillahirrahmanirrahim 
 // Elhamdulillahi Rabbil Alamin
-// Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahb
+// Essalatu vesselamu ala Resulina Muhammedin 
 // La ilahe illallah, Muhammedur Resulullah
 // SuphanAllah velhamdulillah, Allahu Ekber
 
@@ -10,7 +10,7 @@ import InfiniteScrollContainer from "@/hemanen/InfiniteScrollContainer";
 import Post from "@/hemanen/jiriyasuni/Post";
 import PostsLoadingSkeleton from "@/hemanen/web/PostsLoadingSkeleton";
 import kyInstance from "@/pirtukxane/ky";
-import { PostsPage } from "@/pirtukxane/types";
+import { PesdebirsPage } from "@/pirtukxane/types";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
 
@@ -30,7 +30,7 @@ export default function ForYouFeed() {
           "/api/posts/mmwesayit",
           pageParam ? { searchParams: { cursor: pageParam } } : {},
         )
-        .json<PostsPage>(),
+        .json<PesdebirsPage>(),
     initialPageParam: null as string | null,
     getNextPageParam: (lastPage) => lastPage.nextCursor,
   });

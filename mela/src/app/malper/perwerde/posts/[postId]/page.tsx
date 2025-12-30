@@ -1,6 +1,6 @@
 // Bismillahirrahmanirrahim
 // Elhamdulillahirabbulalemin
-// Es-selatu vesselamu ala resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Es-selatu vesselamu ala resulina Muhammedin
 // Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 // SuphanAllah, Elhamdulillah, Allahu Ekber
 // La ilahe illallah
@@ -12,7 +12,7 @@ import MmmPost from "@/hemanen/perwerde/mmPost";
 import UserAvatar from "@/hemanen/UserAvatar";
 import UserTooltip from "@/hemanen/UserTooltip";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude, UserData } from "@/pirtukxane/types";
+import { getPerwerdeInclude, UserData } from "@/pirtukxane/types";
 import { Loader2 } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -24,11 +24,11 @@ interface PageProps {
 }
 
 const getPost = cache(async (postId: string, loggedInUserId: string) => {
-  const post = await prisma.post.findUnique({
+  const post = await prisma.perwerde.findUnique({
     where: {
       id: postId,
     },
-    include: getPostDataInclude(loggedInUserId),
+    include: getPerwerdeInclude(loggedInUserId),
   });
 
   if (!post) notFound();

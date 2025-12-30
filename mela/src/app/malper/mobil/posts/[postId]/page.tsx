@@ -1,11 +1,11 @@
 // Bismillahirrahmanirrahim
 // Elhamdulillahi Rabbil Alamin
-// Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Essalatu vesselamu ala Resulina Muhammedin
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
 import MmmPost from "@/hemanen/robotik/mmPost";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude, UserData } from "@/pirtukxane/types";
+import { getMobilInclude, UserData } from "@/pirtukxane/types";
 import { notFound } from "next/navigation";
 import { cache, Suspense } from "react";
 
@@ -14,11 +14,11 @@ interface PageProps {
 }
 
 const getPost = cache(async (postId: string) => {
-  const post = await prisma.mmavahi.findUnique({
+  const post = await prisma.mobil.findUnique({
     where: {
       id: postId,
     },
-    include: getPostDataInclude(""), // Kullanıcı doğrulama kaldırıldı
+    include: getMobilInclude(""), // Kullanıcı doğrulama kaldırıldı
   });
 
   if (!post) notFound();

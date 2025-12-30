@@ -1,6 +1,6 @@
 // Bismillahirrahmanirrahim
 // Elhamdulillahi Rabbil Alamin
-// Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Essalatu vesselamu ala Resulina Muhammedin 
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
 import Linkify from "@/hemanen/Linkify";
@@ -9,7 +9,7 @@ import Post from "@/hemanen/web/mmPost";
 import UserAvatar from "@/hemanen/UserAvatar";
 import UserTooltip from "@/hemanen/UserTooltip";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude, UserData } from "@/pirtukxane/types";
+import { getJiriyaSuniInclude, UserData } from "@/pirtukxane/types";
 import { Loader2 } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -21,11 +21,11 @@ interface PageProps {
 }
 
 const getPost = cache(async (postId: string) => {
-  const post = await prisma.mmavahi.findUnique({
+  const post = await prisma.jiriyasuni.findUnique({
     where: {
       id: postId,
     },
-    include: getPostDataInclude(""), // Kullanıcı doğrulama kaldırıldı
+    include: getJiriyaSuniInclude(""), // Kullanıcı doğrulama kaldırıldı
   });
 
   if (!post) notFound();
