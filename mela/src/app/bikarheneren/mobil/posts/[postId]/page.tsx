@@ -1,16 +1,18 @@
 // Bismillahirrahmanirrahim
-// Elhamdu lillahi rabbil alamin
-// Es-selatu ve's-selamu ala Resulillah
-// Allah u Ekber velllahilhamd
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin 
+//Suphanallah, Elhamdulillah, Allahu Ekber
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
+
 
 
 import { validateRequest } from "@/auth";
 import Linkify from "@/hemanen/Linkify";
-import Post from "@/components/posts/Post";
+import Post from "@/hemanen/mobil/Post";
 import UserAvatar from "@/hemanen/UserAvatar";
 import UserTooltip from "@/hemanen/UserTooltip";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude, UserData } from "@/pirtukxane/types";
+import { getMobilInclude, UserData } from "@/pirtukxane/types";
 import { Loader2 } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -22,11 +24,11 @@ interface PageProps {
 }
 
 const getPost = cache(async (postId: string, loggedInUserId: string) => {
-  const post = await prisma.mmkargeh.findUnique({
+  const post = await prisma.mobil.findUnique({
     where: {
       id: postId,
     },
-    include: getPostDataInclude(loggedInUserId),
+    include: getMobilInclude(loggedInUserId),
   });
 
   if (!post) notFound();
@@ -64,6 +66,7 @@ export default async function Page({ params: { postId } }: PageProps) {
   return (
     <main className="flex w-full min-w-0 gap-5">
       <div className="w-full min-w-0 space-y-5">
+        <Post post={post} />
       </div>
       <div className="sticky top-[5.25rem] hidden h-fit w-80 flex-none lg:block">
         <Suspense fallback={<Loader2 className="mx-auto animate-spin" />}>
@@ -107,7 +110,7 @@ async function UserInfoSidebar({ user }: UserInfoSidebarProps) {
           {user.bio}
         </div>
       </Linkify>
-     
+  
     </div>
   );
 }

@@ -1,16 +1,16 @@
-// Bismillahirrahmanirrahim 
+// Bismillahirrahmanirrahim
 
 "use client";
 
 import InfiniteScrollContainer from "@/hemanen/InfiniteScrollContainer";
-import Post from "@/hemanen/jiriyasuni/Post";
-import PostsLoadingSkeleton from "@/hemanen/jiriyasuni/PostsLoadingSkeleton";
+import Post from "@/components/posts/Post";
+import PostsLoadingSkeleton from "@/components/posts/PostsLoadingSkeleton";
 import kyInstance from "@/pirtukxane/ky";
 import { PostsPage } from "@/pirtukxane/types";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
 
-export default function ForYouFeed() {
+export default function Bookmarks() {
   const {
     data,
     fetchNextPage,
@@ -19,11 +19,11 @@ export default function ForYouFeed() {
     isFetchingNextPage,
     status,
   } = useInfiniteQuery({
-    queryKey: ["post-feed", "for-you"],
+    queryKey: ["post-feed", "bookmarks"],
     queryFn: ({ pageParam }) =>
       kyInstance
         .get(
-          "/api/posts/mmwesayit",
+          "/api/posts/bookmarked",
           pageParam ? { searchParams: { cursor: pageParam } } : {},
         )
         .json<PostsPage>(),
@@ -40,7 +40,7 @@ export default function ForYouFeed() {
   if (status === "success" && !posts.length && !hasNextPage) {
     return (
       <p className="text-center text-muted-foreground">
-        Hê kesî tiştek parvenekirî ye
+        You don&apos;t have any bookmarks yet.
       </p>
     );
   }
@@ -48,7 +48,7 @@ export default function ForYouFeed() {
   if (status === "error") {
     return (
       <p className="text-center text-destructive">
-        Pirsgirek derket 
+        An error occurred while loading bookmarks.
       </p>
     );
   }
