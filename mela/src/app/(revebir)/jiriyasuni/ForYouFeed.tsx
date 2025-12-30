@@ -1,4 +1,8 @@
 // Bismillahirrahmanirrahim 
+// Elhamdulillahi Rabbil Alamin
+// Es-selatu vesselamu ala rasulina Muhammedin
+// La ilahe illallah, Muhammedur Resulullah
+// SuphanAllah velhamdulillah, Allahu Ekber
 
 "use client";
 
@@ -31,7 +35,7 @@ export default function ForYouFeed() {
     getNextPageParam: (lastPage) => lastPage.nextCursor,
   });
 
-  const posts = data?.pages.flatMap((page) => page.posts) || [];
+  const posts = data?.pages.flatMap((page) => (page as any).posts ?? []) || [];
 
   if (status === "pending") {
     return <PostsLoadingSkeleton />;
