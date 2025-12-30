@@ -1,6 +1,13 @@
+// Bismillahirahmanirahim
+// Elhamdullillahirabbulalemin
+//Es-selatu vesselamu ala rasulina Muhammedin
+// La ilaha illallah, Muhammadan rasulullah
+// Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin
+// LA ILAHE ILLALLAHU WALLAHU EKBER
+
 import { validateRequest } from "@/auth";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude, PostsPage } from "@/pirtukxane/types";
+import { getWebInclude, WebsPage } from "@/pirtukxane/types";
 import { NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
@@ -21,7 +28,7 @@ export async function GET(req: NextRequest) {
       },
       include: {
         post: {
-          include: getPostDataInclude(user.id),
+          include: getWebInclude(user.id),
         },
       },
       orderBy: {
@@ -34,7 +41,7 @@ export async function GET(req: NextRequest) {
     const nextCursor =
       bookmarks.length > pageSize ? bookmarks[pageSize].id : null;
 
-    const data: PostsPage = {
+    const data: WebPage = {
       posts: bookmarks.slice(0, pageSize).map((bookmark) => bookmark.post),
       nextCursor,
     };
