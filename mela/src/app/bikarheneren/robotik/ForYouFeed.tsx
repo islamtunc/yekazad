@@ -26,7 +26,7 @@ export default function ForYouFeed() {
     queryFn: ({ pageParam }) =>
       kyInstance
         .get(
-          "/api/posts/mmkargeh",
+          "/api/parvekirin/mmkargeh",
           pageParam ? { searchParams: { cursor: pageParam } } : {},
         )
         .json<RobotiksPage>(),

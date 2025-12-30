@@ -26,7 +26,7 @@ export default function SearchResults({ query }: SearchResultsProps) {
     queryKey: ["post-feed", "search", query],
     queryFn: ({ pageParam }) =>
       kyInstance
-        .get("/api/posts/mmavahi/search", {
+  .get("/api/parvekirin/mmavahi/search", {
           searchParams: {
             q: query,
             ...(pageParam ? { cursor: pageParam } : {}),

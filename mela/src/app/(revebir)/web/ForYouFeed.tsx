@@ -11,7 +11,7 @@ import InfiniteScrollContainer from "@/hemanen/InfiniteScrollContainer";
 import Post from "@/hemanen/web/Post";
 import PostsLoadingSkeleton from "@/hemanen/web/PostsLoadingSkeleton";
 import kyInstance from "@/pirtukxane/ky";
-import { PostsPage } from "@/pirtukxane/types";
+import { WebsPage } from "@/pirtukxane/types";
 import { useInfiniteQuery, useMutation } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
 import { Button } from "react-bootstrap";
@@ -32,10 +32,10 @@ export default function ForYouFeed() {
     queryFn: ({ pageParam }) =>
       kyInstance
         .get(
-          "/api/posts/mmavahi",
+          "/api/parvekirin/mmavahi",
           pageParam ? { searchParams: { cursor: pageParam } } : {},
         )
-        .json<PostsPage>(),
+        .json<WebsPage>(),
     initialPageParam: null as string | null,
     getNextPageParam: (lastPage) => lastPage.nextCursor,
   });
@@ -44,7 +44,7 @@ export default function ForYouFeed() {
 
   const deleteMutation = useMutation({
     mutationFn: async (postId: string) => {
-      await kyInstance.delete(`/api/posts/mmavahi/${postId}`);
+  await kyInstance.delete(`/api/parvekirin/mmavahi/${postId}`);
     },
     onSuccess: () => {
       toast({

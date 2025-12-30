@@ -23,7 +23,7 @@ export default function ForYouFeed() {
     queryFn: ({ pageParam }) =>
       kyInstance
         .get(
-          "/api/posts/mmwesayit",
+          "/api/parvekirin/mmwesayit",
           pageParam ? { searchParams: { cursor: pageParam } } : {},
         )
         .json<JiriyaSunisPage>(),

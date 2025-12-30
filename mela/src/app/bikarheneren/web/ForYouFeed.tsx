@@ -32,7 +32,7 @@ export default function ForYouFeed() {
     queryFn: ({ pageParam }) =>
       kyInstance
         .get(
-          "/api/posts/mmavahi",
+          "/api/parvekirin/mmavahi",
           pageParam ? { searchParams: { cursor: pageParam } } : {},
         )
         .json<PostsPage>(),
@@ -44,7 +44,7 @@ export default function ForYouFeed() {
 
   const deleteMutation = useMutation({
     mutationFn: async (postId: string) => {
-      await kyInstance.delete(`/api/posts/mmavahi/${postId}`);
+  await kyInstance.delete(`/api/parvekirin/mmavahi/${postId}`);
     },
     onSuccess: () => {
       toast({

@@ -26,7 +26,7 @@ export default function Mmavahi() {
     queryFn: ({ pageParam }) =>
       kyInstance
         .get(
-          "/api/posts/mmavahi",
+          "/api/parvekirin/mmavahi",
           pageParam ? { searchParams: { cursor: pageParam } } : {},
         )
         .json<WebsPage>(),
