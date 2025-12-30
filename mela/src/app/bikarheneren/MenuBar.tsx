@@ -7,7 +7,7 @@
 import { validateRequest } from "@/auth";
 import { Button } from "@/hemanen/ui/button";
 import prisma from "@/pirtukxane/prisma";
-import { Bookmark, Home, Mail } from "lucide-react";
+import { Home, Mail } from "lucide-react";
 import Link from "next/link";
 
 interface MenuBarProps {
@@ -39,17 +39,7 @@ export default async function MenuBar({ className }: MenuBarProps) {
         </Link>
       </Button>
     
-      <Button
-        variant="ghost"
-        className="flex items-center justify-start gap-3"
-        title="Bookmarks"
-        asChild
-      >
-        <Link href="/bookmarks">
-          <Bookmark />
-          <span className="hidden lg:inline">Bookmarks</span>
-        </Link>
-      </Button>
+      {/* Bookmarks removed */}
 
       <Button
         variant="ghost"

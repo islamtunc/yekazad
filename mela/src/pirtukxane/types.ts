@@ -124,52 +124,8 @@ export interface PerwerdesPage {
   perwerdes: PerwerdeData[];
   nextCursor: string | null;
 }
-// Yorum (Comment) ile ilgili tüm tip ve fonksiyonları kaldırın
 
-// export function getCommentDataInclude(loggedInUserId: string) {
-//   return {
-//     // user alanı kaldırıldı, yorumlar anonim olacak
-//   } satisfies Prisma.CommentInclude;
-// }
-
-// export type CommentData = Prisma.CommentGetPayload<{
-//   include: ReturnType<typeof getCommentDataInclude>;
-// }>;
-
-// export interface CommentsPage {
-//   comments: CommentData[];
-//   previousCursor: string | null;
-// }
-
-// Bildirim (Notification) ile ilgili tüm tip ve fonksiyonları kaldırın
-
-// export const notificationsInclude = {
-//   issuer: {
-//     select: {
-//       username: true,
-//       displayName: true,
-//       avatarUrl: true,
-//     },
-//   },
-//   post: {
-//     select: {
-//       content: true, // content artık string[] olacak
-//     },
-//   },
-// } satisfies Prisma.NotificationInclude;
-
-// export type NotificationData = Prisma.NotificationGetPayload<{
-//   include: typeof notificationsInclude;
-// }>;
-
-// export interface NotificationsPage {
-//   notifications: NotificationData[];
-//   nextCursor: string | null;
-// }
-
-export interface BookmarkInfo {
-  isBookmarkedByUser: boolean;
-}
+/* BookmarkInfo removed because bookmarks were removed from the schema */
 
 export interface Attachment {
   file: File;

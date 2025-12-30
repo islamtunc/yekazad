@@ -34,7 +34,7 @@ model User {
   sessions              Session[]
   posts                 Post[]
   web                   Web[]
-  bookmarks             Bookmark[]
+  
 
   createdAt   DateTime      @default(now())
   Mobil       Mobil[]
@@ -62,7 +62,7 @@ model Post {
   userId              String
   user                User           @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments         Media[]
-  bookmarks           Bookmark[]
+  
 
   createdAt DateTime @default(now())
 
@@ -76,7 +76,7 @@ model Web {
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
-  bookmarks Bookmark[]
+  
 
   createdAt           DateTime       @default(now())
 
@@ -90,7 +90,7 @@ model Mobil {
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
-  bookmarks Bookmark[]
+  
 
   createdAt           DateTime       @default(now())
 
@@ -104,7 +104,7 @@ model JiriyaSuni {
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
-  bookmarks Bookmark[]
+  
 
   createdAt           DateTime       @default(now())
 
@@ -118,7 +118,7 @@ model Robotik {
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
-  bookmarks Bookmark[]
+  
 
   createdAt           DateTime       @default(now())
 
@@ -132,7 +132,7 @@ model Pesdebir {
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
-  bookmarks Bookmark[]
+  
 
   createdAt           DateTime       @default(now())
 
@@ -146,7 +146,7 @@ model Perwerde {
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
-  bookmarks Bookmark[]
+  
 
   createdAt           DateTime       @default(now())
 
@@ -185,28 +185,7 @@ enum MediaType {
   VIDEO
 }
 
-model Bookmark {
-  id     String @id @default(cuid())
-  userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  postId String
-  post   Post   @relation(fields: [postId], references: [id], onDelete: Cascade)
 
-  createdAt     DateTime     @default(now())
-  web           Web?         @relation(fields: [webId], references: [id], onDelete: Cascade)
-  webId         String?
-  mobil         Mobil?       @relation(fields: [mobilId], references: [id], onDelete: Cascade)
-  mobilId       String?
-  perwerde      Perwerde?    @relation(fields: [perwerdeId], references: [id], onDelete: Cascade)
-  perwerdeId    String?
-  pesdebir      Pesdebir?    @relation(fields: [pesdebirId], references: [id], onDelete: Cascade)
-  pesdebirId    String?
-  jiriyasuni    JiriyaSuni?  @relation(fields: [jiriyasuniId], references: [id], onDelete: Cascade)
-  jiriyasuniId  String?
-  robotik       Robotik?     @relation(fields: [robotikId], references: [id], onDelete: Cascade)
-  robotikId     String?
-
-}
 
 model Mmmpeyam {
   id        String   @id @default(cuid())
