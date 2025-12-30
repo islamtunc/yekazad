@@ -1,12 +1,16 @@
 // Bismillahirrahmanirrahim 
-
+// Elhamdullillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin
+// La ilaha illallah, Muhammadan rasulullah
+// Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin
+// LA ILAHE ILLALLAHU WALLAHU EKBER
 "use client";
 
 import InfiniteScrollContainer from "@/hemanen/InfiniteScrollContainer";
-import Post from "@/components/posts/Post";
-import PostsLoadingSkeleton from "@/components/posts/PostsLoadingSkeleton";
+import Post from "@/hemanen/mobil/Post";
+import PostsLoadingSkeleton from "@/hemanen/mobil/PostsLoadingSkeleton";
 import kyInstance from "@/pirtukxane/ky";
-import { PostsPage } from "@/pirtukxane/types";
+import { MobilsPage } from "@/pirtukxane/types";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
 
@@ -26,7 +30,7 @@ export default function ForYouFeed() {
           "/api/posts/mmhewcedari",
           pageParam ? { searchParams: { cursor: pageParam } } : {},
         )
-        .json<PostsPage>(),
+        .json<MobilsPage>(),
     initialPageParam: null as string | null,
     getNextPageParam: (lastPage) => lastPage.nextCursor,
   });
