@@ -3,13 +3,13 @@
 // Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
-import Linkify from "@/components/Linkify";
-import MmmPost from "@/components/web/mmPost";
-import Post from "@/components/web/mmPost";
-import UserAvatar from "@/components/UserAvatar";
-import UserTooltip from "@/components/UserTooltip";
-import prisma from "@/lib/prisma";
-import { getPostDataInclude, UserData } from "@/lib/types";
+import Linkify from "@/hemanen/Linkify";
+import MmmPost from "@/hemanen/web/mmPost";
+import Post from "@/hemanen/web/mmPost";
+import UserAvatar from "@/hemanen/UserAvatar";
+import UserTooltip from "@/hemanen/UserTooltip";
+import prisma from "@/pirtukxane/prisma";
+import { getPostDataInclude, UserData } from "@/pirtukxane/types";
 import { Loader2 } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";

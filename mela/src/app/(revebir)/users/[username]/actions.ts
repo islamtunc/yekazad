@@ -7,12 +7,12 @@
 "use server";
 
 import { validateRequest } from "@/auth";
-import prisma from "@/lib/prisma";
-import { getUserDataSelect } from "@/lib/types";
+import prisma from "@/pirtukxane/prisma";
+import { getUserDataSelect } from "@/pirtukxane/types";
 import {
   updateUserProfileSchema,
   UpdateUserProfileValues,
-} from "@/lib/validation";
+} from "@/pirtukxane/validation";
 
 export async function updateUserProfile(values: UpdateUserProfileValues) {
   const validatedValues = updateUserProfileSchema.parse(values);

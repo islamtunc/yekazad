@@ -3,9 +3,9 @@
 // Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
-import MmmPost from "@/components/jiriyasuni/mmPost";
-import prisma from "@/lib/prisma";
-import { getPostDataInclude, UserData } from "@/lib/types";
+import MmmPost from "@/hemanen/jiriyasuni/mmPost";
+import prisma from "@/pirtukxane/prisma";
+import { getPostDataInclude, UserData } from "@/pirtukxane/types";
 import { notFound } from "next/navigation";
 import { cache, Suspense } from "react";
 

@@ -5,8 +5,8 @@
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 
 import { validateRequest } from "@/auth";
-import { Button } from "@/components/ui/button";
-import prisma from "@/lib/prisma";
+import { Button } from "@/hemanen/ui/button";
+import prisma from "@/pirtukxane/prisma";
 import { Bookmark, Home, Mail } from "lucide-react";
 import Link from "next/link";
 

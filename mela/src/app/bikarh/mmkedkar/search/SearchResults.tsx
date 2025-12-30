@@ -2,11 +2,11 @@
 
 "use client";
 
-import InfiniteScrollContainer from "@/components/InfiniteScrollContainer";
-import Post from "@/components/web/Post";
-import PostsLoadingSkeleton from "@/components/web/PostsLoadingSkeleton";
-import kyInstance from "@/lib/ky";
-import { PostsPage } from "@/lib/types";
+import InfiniteScrollContainer from "@/hemanen/InfiniteScrollContainer";
+import Post from "@/hemanen/web/Post";
+import PostsLoadingSkeleton from "@/hemanen/web/PostsLoadingSkeleton";
+import kyInstance from "@/pirtukxane/ky";
+import { PostsPage } from "@/pirtukxane/types";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
 

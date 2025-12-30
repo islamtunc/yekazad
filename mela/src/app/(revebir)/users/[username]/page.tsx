@@ -5,18 +5,18 @@
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 
 import { validateRequest } from "@/auth";
-import Linkify from "@/components/Linkify";
-import UserAvatar from "@/components/UserAvatar";
-import prisma from "@/lib/prisma";
-import {  getUserDataSelect, UserData } from "@/lib/types";
-import { formatNumber } from "@/lib/utils";
+import Linkify from "@/hemanen/Linkify";
+import UserAvatar from "@/hemanen/UserAvatar";
+import prisma from "@/pirtukxane/prisma";
+import {  getUserDataSelect, UserData } from "@/pirtukxane/types";
+import { formatNumber } from "@/pirtukxane/utils";
 import { formatDate } from "date-fns";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import EditProfileButton from "./EditProfileButton";
 import UserPosts from "./UserPosts";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/hemanen/ui/button";
 import Home from "./mmmmm";
 
 interface PageProps {

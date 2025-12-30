@@ -7,16 +7,16 @@
 
 "use client";
 
-import InfiniteScrollContainer from "@/components/InfiniteScrollContainer";
-import Post from "@/components/perwerde/Post";
-import PostsLoadingSkeleton from "@/components/web/PostsLoadingSkeleton";
-import kyInstance from "@/lib/ky";
-import { PostsPage } from "@/lib/types";
+import InfiniteScrollContainer from "@/hemanen/InfiniteScrollContainer";
+import Post from "@/hemanen/perwerde/Post";
+import PostsLoadingSkeleton from "@/hemanen/web/PostsLoadingSkeleton";
+import kyInstance from "@/pirtukxane/ky";
+import { PostsPage } from "@/pirtukxane/types";
 import { useInfiniteQuery, useMutation } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
 import { Button } from "react-bootstrap";
 import Link from "next/link";
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "@/hemanen/ui/use-toast";
 
 
 export default function ForYouFeed() {

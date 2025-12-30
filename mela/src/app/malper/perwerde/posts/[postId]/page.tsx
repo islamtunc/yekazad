@@ -7,12 +7,12 @@
 
 import { validateRequest } from "@/auth";
 
-import Linkify from "@/components/Linkify";
-import MmmPost from "@/components/perwerde/mmPost";
-import UserAvatar from "@/components/UserAvatar";
-import UserTooltip from "@/components/UserTooltip";
-import prisma from "@/lib/prisma";
-import { getPostDataInclude, UserData } from "@/lib/types";
+import Linkify from "@/hemanen/Linkify";
+import MmmPost from "@/hemanen/perwerde/mmPost";
+import UserAvatar from "@/hemanen/UserAvatar";
+import UserTooltip from "@/hemanen/UserTooltip";
+import prisma from "@/pirtukxane/prisma";
+import { getPostDataInclude, UserData } from "@/pirtukxane/types";
 import { Loader2 } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";

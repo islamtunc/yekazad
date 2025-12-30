@@ -3,15 +3,15 @@
 
 
 import avatarPlaceholder from "@/assets/avatar-placeholder.png";
-import CropImageDialog from "@/components/CropImageDialog";
-import LoadingButton from "@/components/LoadingButton";
+import CropImageDialog from "@/hemanen/CropImageDialog";
+import LoadingButton from "@/hemanen/LoadingButton";
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
+} from "@/hemanen/ui/dialog";
 import {
   Form,
   FormControl,
@@ -19,15 +19,15 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { UserData } from "@/lib/types";
+} from "@/hemanen/ui/form";
+import { Input } from "@/hemanen/ui/input";
+import { Label } from "@/hemanen/ui/label";
+import { Textarea } from "@/hemanen/ui/textarea";
+import { UserData } from "@/pirtukxane/types";
 import {
   updateUserProfileSchema,
   UpdateUserProfileValues,
-} from "@/lib/validation";
+} from "@/pirtukxane/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Camera } from "lucide-react";
 import Image, { StaticImageData } from "next/image";

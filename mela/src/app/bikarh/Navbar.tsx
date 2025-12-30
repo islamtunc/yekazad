@@ -10,7 +10,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import Link from "next/link";
-import UserButton from "@/components/UserButton";
+import UserButton from "@/hemanen/UserButton";
 import { FaBars } from "react-icons/fa";
 
 export default function Navbar() {

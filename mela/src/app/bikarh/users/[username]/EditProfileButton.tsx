@@ -2,8 +2,8 @@
 
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { UserData } from "@/lib/types";
+import { Button } from "@/hemanen/ui/button";
+import { UserData } from "@/pirtukxane/types";
 import { useState } from "react";
 import EditProfileDialog from "./EditProfileDialog";
 

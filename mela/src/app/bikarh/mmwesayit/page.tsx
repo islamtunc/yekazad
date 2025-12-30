@@ -2,12 +2,12 @@
 
 
 
-import PostEditor from "@/components/jiriyasuni/editor/PostEditor";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import PostEditor from "@/hemanen/jiriyasuni/editor/PostEditor";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/hemanen/ui/tabs";
 
 import ForYouFeed from "./ForYouFeed";
 
-import SearchField from "@/components/web/SearchField";
+import SearchField from "@/hemanen/web/SearchField";
 import { Alert } from "react-bootstrap";
 
 export default function Home() {

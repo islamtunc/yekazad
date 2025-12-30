@@ -3,8 +3,8 @@
 //Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi, ecmain
 
 import { validateRequest } from "@/auth";
-import prisma from "@/lib/prisma";
-import { getPostDataInclude, PostsPage } from "@/lib/types";
+import prisma from "@/pirtukxane/prisma";
+import { getPostDataInclude, PostsPage } from "@/pirtukxane/types";
 import { NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
