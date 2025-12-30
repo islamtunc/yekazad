@@ -9,7 +9,7 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
-import ForYouFeed from "../mobil/ForYouFeed";
+import ForYouFeed from "./ForYouFeed";
 
 function page() {
   return (

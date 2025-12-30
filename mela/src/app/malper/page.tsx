@@ -9,7 +9,7 @@
 // La ilahe illallah, Muhammedur Resulullah
 import React from 'react'
 import Mmavahi from './web/ForYouFeed'
-import Mmhewcedari from './android/ForYouFeed'
+import Mmhewcedari from './mobil/ForYouFeed'
 import Mmkargeh from './jiriyasuni/ForYouFeed'
 
 function page() {
