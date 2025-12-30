@@ -1,6 +1,6 @@
 // Bismillahirahmanirahim 
 // ElHAMDULİLLAHİRABBULALEMİN
-// Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Es-selatu ve Es-selamu ala Resulina Muhammedin 
 // Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 // SubhanAllah, Elhamdulillah, Allahu Ekber
 // Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
@@ -16,7 +16,7 @@ import SessionProvider from "./SessionProvider";
 
 import 'bootstrap/dist/css/bootstrap.css'
 import { Row, Col, Alert } from "react-bootstrap";
-export default async function Layout({
+export default async function BikarhenerenLayout({
   children,
 }: {
   children: React.ReactNode;
