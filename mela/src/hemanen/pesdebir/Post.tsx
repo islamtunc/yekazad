@@ -1,10 +1,13 @@
 // Bismillahirrahmanirrahim 
 // Elhamdulillahirabbulalemin
 // es-salatu ve es-selamu alâ Resûlillah
+// Subhanallah, Elhamdulillah, Allahu Ekber
+// La ilaha illallah, Muhammadan rasulullah
+// Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin
 "use client";
 
-import { useSession } from "@/app/(main)/SessionProvider";
-import { PostData } from "@/pirtukxane/types";
+import { useSession } from "@/app/(revebir)/SessionProvider";
+import { PesdebirData } from "@/pirtukxane/types";
 import { cn, formatRelativeDate } from "@/pirtukxane/utils";
 import { Media } from "@prisma/client";
 import Image from "next/image";
@@ -15,7 +18,7 @@ import UserTooltip from "../UserTooltip";
 import PostMoreButton from "./PostMoreButton";
 
 interface PostProps {
-  post: PostData;
+  post: PesdebirData;
 }
 
 export default function Post({ post }: PostProps) {

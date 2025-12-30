@@ -1,6 +1,6 @@
 // Bismillahirrahmanirahim
 // Elhamdu lillahi rabbil alamin
-// Esselatu vesselamu ala rasulillah ve ala alihi ve sahbihi ecmain
+// Esselatu vesselamu ala rasulillah 
 // La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
 
@@ -9,14 +9,14 @@
 
 import { validateRequest } from "@/auth";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude } from "@/pirtukxane/types";
+import { getRobotikInclude } from "@/pirtukxane/types";
 
 export async function deletePost(id: string) {
   const { user } = await validateRequest();
 
   if (!user) throw new Error("Unauthorized");
 
-  const post = await prisma.post.findUnique({
+  const post = await prisma.robotik.findUnique({
     where: { id },
   });
 
@@ -24,9 +24,9 @@ export async function deletePost(id: string) {
 
   if (post.userId !== user.id) throw new Error("Unauthorized");
 
-  const deletedPost = await prisma.post.delete({
+  const deletedPost = await prisma.robotik.delete({
     where: { id },
-    include: getPostDataInclude(user.id),
+    include: getRobotikInclude(user.id),
   });
 
   return deletedPost;

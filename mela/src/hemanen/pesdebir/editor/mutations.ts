@@ -1,14 +1,14 @@
 // Bismillahirrahmanirrahim
 // Elhamdulillahi Rabbil Alamin
-// Ve salatu ve selamu ala Resulina Muhammedin ve ala alihi ve sah
+// Ve salatu ve selamu ala Resulina Muhammedin 
 // La ilahe illallah, Muhammedur Resulullah
 // SuphanAllah velhamdulillah, Allahu Ekber
 // Allah ümmetimizi korusun, birlik ve beraberliğimizi daim eylesin.
 
 
-import { useSession } from "@/app/(main)/SessionProvider";
+import { useSession } from "@/app/(revebir)/SessionProvider";
 import { useToast } from "@/hemanen/ui/use-toast";
-import { PostsPage } from "@/pirtukxane/types";
+import { PesdebirsPage } from "@/pirtukxane/types";
 import {
   InfiniteData,
   QueryFilters,
@@ -40,7 +40,7 @@ export function useSubmitPostMutation() {
 
       await queryClient.cancelQueries(queryFilter);
 
-      queryClient.setQueriesData<InfiniteData<PostsPage, string | null>>(
+      queryClient.setQueriesData<InfiniteData<PesdebirsPage, string | null>>(
         queryFilter,
         (oldData) => {
           const firstPage = oldData?.pages[0];

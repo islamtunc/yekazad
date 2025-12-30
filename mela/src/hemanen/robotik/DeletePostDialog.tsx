@@ -1,4 +1,9 @@
-import { PostData } from "@/pirtukxane/types";
+// Bismillahirrahmanirrahim
+// Elhamdulillahirabbulalemin
+// Allah u Ekber, Allah u Ekber, La ilahe illallah
+// SuphanAllah, Elhamdulillah, Allahu Ekber
+// Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin
+import { RobotikData } from "@/pirtukxane/types";
 import LoadingButton from "../LoadingButton";
 import { Button } from "../ui/button";
 import {
@@ -12,7 +17,7 @@ import {
 import { useDeletePostMutation } from "./mutations";
 
 interface DeletePostDialogProps {
-  post: PostData;
+  post: RobotikData;
   open: boolean;
   onClose: () => void;
 }
