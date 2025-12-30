@@ -6,12 +6,12 @@
 // La ilahe illallah, Allahu Ekber, Allahu Ekber, ve lillahi'l-hamd
 import React from "react";
 import { Alert } from "react-bootstrap";
-import Mmmnavbar from "./components/mmnav";
+import Mmmnavbar from "./heman/mmnav";
 
 import 'bootstrap/dist/css/bootstrap.css'
-import Footer from "./components/mmbingeh";
+import Footer from "./heman/mmbingeh";
 import AssistantRoot from "./assistant";
-import ContactForm from "./components/mmfrm";
+import ContactForm from "./heman/mmfrm";
 
 
 
