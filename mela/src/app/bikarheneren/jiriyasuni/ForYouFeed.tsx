@@ -1,5 +1,9 @@
 // Bismillahirrahmanirrahim 
-
+//  Elhamdulillahi Rabbil Alamin
+// Ve salatu ve selamu ala Resulina Muhammedin 
+// La ilahe illallah, Muhammedur Resulullah
+// SuphanAllah velhamdulillah, Allahu Ekber
+// Allah ümmetimizi korusun, birlik ve beraberliğimizi daim eylesin.
 "use client";
 
 import InfiniteScrollContainer from "@/hemanen/InfiniteScrollContainer";

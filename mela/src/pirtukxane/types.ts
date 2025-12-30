@@ -17,6 +17,17 @@ export function getUserDataSelect(loggedInUserId: string) {
   } satisfies Prisma.UserSelect;
 }
 
+export function getPostDataInclude(loggedInUserId: string) {
+  // Generic include used across different post-like models (web, mobil, etc.)
+  // Return type is `any` to keep it compatible with each model's specific Include type.
+  return {
+    user: {
+      select: getUserDataSelect(loggedInUserId),
+    },
+    attachments: true,
+  } as any;
+}
+
 export type UserData = Prisma.UserGetPayload<{
   select: ReturnType<typeof getUserDataSelect>;
 }>;

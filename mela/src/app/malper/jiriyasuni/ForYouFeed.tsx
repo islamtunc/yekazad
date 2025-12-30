@@ -35,7 +35,7 @@ export default function Mmkargeh() {
     getNextPageParam: (lastPage) => lastPage.nextCursor,
   });
 
-  const posts = data?.pages.flatMap((page) => page.posts) || [];
+  const posts = data?.pages.flatMap((page) => (page as any).posts ?? []) || [];
 
   if (status === "pending") {
     return <PostsLoadingSkeleton />;
