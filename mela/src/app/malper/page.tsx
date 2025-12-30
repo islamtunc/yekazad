@@ -8,9 +8,9 @@
 // Estağfirullah El-Azim
 // La ilahe illallah, Muhammedur Resulullah
 import React from 'react'
-import Mmavahi from './mmavahi/ForYouFeed'
-import Mmhewcedari from './mmhewcedari/ForYouFeed'
-import Mmkargeh from './mmkargeh/ForYouFeed'
+import Mmavahi from './web/ForYouFeed'
+import Mmhewcedari from './android/ForYouFeed'
+import Mmkargeh from './jiriyasuni/ForYouFeed'
 
 function page() {
   return (

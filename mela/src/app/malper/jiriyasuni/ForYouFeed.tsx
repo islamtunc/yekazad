@@ -1,16 +1,20 @@
 // Bismillahirrahmanirrahim 
+// Elhamdulillahi Rabbil Alamin
+// Essalatu vesselamu ala Resulina Muhammedin 
+// La ilahe illallah, Muhammedur Resulullah
+// SuphanAllah velhamdulillah, Allahu Ekber
 
 "use client";
 
 import InfiniteScrollContainer from "@/components/InfiniteScrollContainer";
 import Post from "@/components/pesdebir/Post";
-import PostsLoadingSkeleton from "@/components/posts/PostsLoadingSkeleton";
+import PostsLoadingSkeleton from "@/components/web/PostsLoadingSkeleton";
 import kyInstance from "@/lib/ky";
 import { PostsPage } from "@/lib/types";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
 
-export default function ForYouFeed() {
+export default function Mmkargeh() {
   const {
     data,
     fetchNextPage,
