@@ -1,10 +1,13 @@
 // Bismillahirahmanirahim
 //Elhamdulillahirabbilalemin
-
+// Subhanallah, Elhamdulillah, Allahu Ekber
+// La ilaha illallah, Muhammadan rasulullah
+// Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin
+//LA ILAHE ILLALLAHU WALLAHU EKBER
 
 import { validateRequest } from "@/auth";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude, PostsPage } from "@/pirtukxane/types";
+import { getJiriyaSuniInclude, JiriyaSunisPage } from "@/pirtukxane/types";
 import { NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
@@ -19,8 +22,8 @@ export async function GET(req: NextRequest) {
       return Response.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const posts = await prisma.mmkargeh.findMany({
-      include: getPostDataInclude(user.id),
+    const posts = await prisma.jiriyasuni.findMany({
+      include: getJiriyaSuniInclude(user.id),
       orderBy: { createdAt: "desc" },
       take: pageSize + 1,
       cursor: cursor ? { id: cursor } : undefined,
@@ -28,7 +31,7 @@ export async function GET(req: NextRequest) {
 
     const nextCursor = posts.length > pageSize ? posts[pageSize].id : null;
 
-    const data: PostsPage = {
+    const data: JiriyaSunisPage = {
       posts: posts.slice(0, pageSize).map((post: any) => ({
         id: post.id,
         content: Array.isArray(post.content) ? post.content : [post.content],

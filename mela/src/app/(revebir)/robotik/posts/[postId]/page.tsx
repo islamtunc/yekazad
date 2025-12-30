@@ -2,15 +2,17 @@
 // Elhamdu lillahi rabbil alamin
 // Es-selatu ve's-selamu ala Resulillah
 // Allah u Ekber velllahilhamd
-
+// La ilahe illallah Muhammadan resulullah
+// Subhanallah, Elhamdulillah, Allahu Ekber
+//LA ILAHE ILLALLAHU WALLAHU EKBER
 
 import { validateRequest } from "@/auth";
 import Linkify from "@/hemanen/Linkify";
-import Post from "@/components/posts/Post";
+import Post from "@/hemanen/robotik/Post";
 import UserAvatar from "@/hemanen/UserAvatar";
 import UserTooltip from "@/hemanen/UserTooltip";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude, UserData } from "@/pirtukxane/types";
+import { getRobotikInclude, UserData } from "@/pirtukxane/types";
 import { Loader2 } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -26,7 +28,7 @@ const getPost = cache(async (postId: string, loggedInUserId: string) => {
     where: {
       id: postId,
     },
-    include: getPostDataInclude(loggedInUserId),
+    include: getRobotikInclude(loggedInUserId),
   });
 
   if (!post) notFound();
