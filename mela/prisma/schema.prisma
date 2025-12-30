@@ -42,7 +42,6 @@ model User {
   Pesdebir    Pesdebir[]
   JiriyaSuni  JiriyaSuni[]
   Robotik     Robotik[]
-  Mmhuner     Mmhuner[]
   role                  Role           @default(USER)
   disabled              Boolean         @default(false)
   @@map("users")
@@ -176,8 +175,7 @@ model Media {
   jiriyasuniId  String?
   robotik       Robotik?     @relation(fields: [robotikId], references: [id], onDelete: SetNull)
   robotikId     String?
-  Mmhuner       Mmhuner?     @relation(fields: [mmhunerId], references: [id])
-  mmhunerId     String?
+
 
   @@map("post_media")
 }
