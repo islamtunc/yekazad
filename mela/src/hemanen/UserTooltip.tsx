@@ -1,8 +1,13 @@
 // Bismillahirrahmanirrahim 
+// Elhamdullillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin
+// La ilaha illallah, Muhammadan rasulullah
+// Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin
+// LA ILAHE ILLALLAHU WALLAHU EKBER
 
 "use client";
 
-import { useSession } from "@/app/(main)/SessionProvider";
+import { useSession } from "@/app/(revebir)/SessionProvider";
 import {  UserData } from "@/pirtukxane/types";
 import Link from "next/link";
 import { PropsWithChildren } from "react";

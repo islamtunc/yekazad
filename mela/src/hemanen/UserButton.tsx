@@ -1,9 +1,14 @@
 // Bismillahirahmanirahim 
+// ELHAMDULILLAHİ RABBİL ALEMIN
+// Es -selatu vesselamu ala rasulina Muhammedin
+// La ilaha illallah, Muhammadan rasulullah
+// Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin
+// LA ILAHE ILLALLAHU WALLAHU EKBER
 
 "use client";
 
 import { logout } from "@/app/(auth)/actions";
-import { useSession } from "@/app/(main)/SessionProvider";
+import { useSession } from "@/app/(revebir)/SessionProvider";
 import { cn } from "@/pirtukxane/utils";
 import { useQueryClient } from "@tanstack/react-query";
 import { Check, LogOutIcon, Monitor, Moon, Sun, UserIcon } from "lucide-react";
