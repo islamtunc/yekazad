@@ -21,24 +21,109 @@ export type UserData = Prisma.UserGetPayload<{
   select: ReturnType<typeof getUserDataSelect>;
 }>;
 
-export function getPostDataInclude(loggedInUserId: string) {
+export function getWebInclude(loggedInUserId: string) {
   return {
     user: {
       select: getUserDataSelect(loggedInUserId),
     },
     attachments: true,
-  } satisfies Prisma.PostInclude;
+  } satisfies Prisma.WebInclude;
 }
 
-export type PostData = Prisma.PostGetPayload<{
-  include: ReturnType<typeof getPostDataInclude>;
+export type WebData = Prisma.PostGetPayload<{
+  include: ReturnType<typeof getWebInclude>;
 }>;
 
-export interface PostsPage {
-  posts: PostData[];
+export interface WebsPage {
+  webs: WebData[];
+  nextCursor: string | null;
+
+}export function getJiriyaSuniInclude(loggedInUserId: string) {
+  return {
+    user: {
+      select: getUserDataSelect(loggedInUserId),
+    },
+    attachments: true,
+  } satisfies Prisma.JiriyaSuniInclude;
+}
+
+export type JiriyaSuniData = Prisma.PostGetPayload<{
+  include: ReturnType<typeof getJiriyaSuniInclude>;
+}>;
+
+export interface JiriyaSunisPage {
+  jiriyaSunis: JiriyaSuniData[];
   nextCursor: string | null;
 }
 
+export function getMobilInclude(loggedInUserId: string) {
+  return {
+    user: {
+      select: getUserDataSelect(loggedInUserId),
+    },
+    attachments: true,
+  } satisfies Prisma.MobilInclude;
+}
+
+export type MobilData = Prisma.PostGetPayload<{
+  include: ReturnType<typeof getMobilInclude>;
+}>;
+
+export interface MobilsPage {
+  mobils: MobilData[];
+  nextCursor: string | null;
+}
+
+
+
+
+
+export function getPesdebirInclude(loggedInUserId: string) {
+  return {
+    user: {
+      select: getUserDataSelect(loggedInUserId),
+    },
+    attachments: true,
+  } satisfies Prisma.PesdebirInclude;
+}
+
+export type PesdebirData = Prisma.PostGetPayload<{
+  include: ReturnType<typeof getPesdebirInclude>;
+}>;
+
+export interface PesdebirsPage {
+  pesdebirs: PesdebirData[];
+  nextCursor: string | null;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+export function getPerwerdeInclude(loggedInUserId: string) {
+  return {
+    user: {
+      select: getUserDataSelect(loggedInUserId),
+    },
+    attachments: true,
+  } satisfies Prisma.PerwerdeInclude;
+}
+
+export type PerwerdeData = Prisma.PostGetPayload<{
+  include: ReturnType<typeof getPerwerdeInclude>;
+}>;
+
+export interface PerwerdesPage {
+  perwerdes: PerwerdeData[];
+  nextCursor: string | null;
+}
 // Yorum (Comment) ile ilgili tüm tip ve fonksiyonları kaldırın
 
 // export function getCommentDataInclude(loggedInUserId: string) {
@@ -92,4 +177,21 @@ export interface Attachment {
   url?: string;
   type?: string;
   isUploading: boolean;
+}
+export function getRobotikInclude(loggedInUserId: string) {
+  return {
+    user: {
+      select: getUserDataSelect(loggedInUserId),
+    },
+    attachments: true,
+  } satisfies Prisma.RobotikInclude;
+}
+
+export type RobotikData = Prisma.PostGetPayload<{
+  include: ReturnType<typeof getRobotikInclude>;
+}>;
+
+export interface RobotiksPage {
+  robotiks: RobotikData[];
+  nextCursor: string | null;
 }

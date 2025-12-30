@@ -1,8 +1,12 @@
+// Bismillahirrahmanirrahim 
+// Elhamdulillahirabilalemin
+// Es-selatu ve Es-selamu ala Resulina Muhammedin
+// Subhanallah velhamdulillah, Allahu ekber
+// La ilahe illallah
 
 
 
-
-import { PostsPage } from "@/pirtukxane/types";
+import { JiriyaSunisPage } from "@/pirtukxane/types";
 import {
   InfiniteData,
   QueryFilters,

@@ -1,6 +1,6 @@
 // Bismillahirrahmanirrahim
 // Elhamdulillahirabbulalemin
-// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Es-selatu vesselamu ala rasulina Muhammedin 
 //Suphanallah, Elhamdulillah, Allahu Ekber
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 
@@ -8,11 +8,11 @@
 
 import { validateRequest } from "@/auth";
 import Linkify from "@/hemanen/Linkify";
-import Post from "@/components/posts/Post";
+import Post from "@/hemanen/jiriyasuni/Post";
 import UserAvatar from "@/hemanen/UserAvatar";
 import UserTooltip from "@/hemanen/UserTooltip";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude, UserData } from "@/pirtukxane/types";
+import { getJiriyaSuniInclude, UserData } from "@/pirtukxane/types";
 import { Loader2 } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -28,7 +28,7 @@ const getPost = cache(async (postId: string, loggedInUserId: string) => {
     where: {
       id: postId,
     },
-    include: getPostDataInclude(loggedInUserId),
+    include: getJiriyaSuniInclude(loggedInUserId),
   });
 
   if (!post) notFound();
