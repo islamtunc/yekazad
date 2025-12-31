@@ -14,7 +14,7 @@ interface PageProps {
 }
 
 const getPost = cache(async (postId: string) => {
-  const post = await prisma.mmavahi.findUnique({
+  const post = await prisma.pesdebir.findUnique({
     where: {
       id: postId,
     },
