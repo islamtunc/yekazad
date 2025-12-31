@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
       return Response.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const posts = await prisma.mmwesayit.findMany({
+    const posts = await prisma.mobil.findMany({
       include: getMobilInclude(user.id),
       orderBy: { createdAt: "desc" },
       take: pageSize + 1,
