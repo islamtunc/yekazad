@@ -22,7 +22,7 @@ export async function GET(req: NextRequest) {
       return Response.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const posts = await prisma.jiriyasuni.findMany({
+    const posts = await prisma.jiriyaSuni.findMany({
       include: getJiriyaSuniInclude(user.id),
       orderBy: { createdAt: "desc" },
       take: pageSize + 1,
@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
     const nextCursor = posts.length > pageSize ? posts[pageSize].id : null;
 
     const data: JiriyaSunisPage = {
-      posts: posts.slice(0, pageSize).map((post: any) => ({
+      jiriyaSunis: posts.slice(0, pageSize).map((post: any) => ({
         id: post.id,
         content: Array.isArray(post.content) ? post.content : [post.content],
         userId: post.userId,
