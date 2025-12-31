@@ -1,12 +1,15 @@
 // Bismillahirahmanirahim 
-
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin 
+//Suphanallah, Elhamdulillah, Allahu Ekber
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 "use client";
 
 import InfiniteScrollContainer from "@/hemanen/InfiniteScrollContainer";
 import PostsLoadingSkeleton from "@/hemanen/web/PostsLoadingSkeleton";
 import Post from "@/hemanen/web/Post";
 import kyInstance from "@/pirtukxane/ky";
-import { PostsPage } from "@/pirtukxane/types";
+import { PerwerdesPage } from "@/pirtukxane/types";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
 
@@ -30,7 +33,7 @@ export default function UserPosts({ userId }: UserPostsProps) {
           `/api/users/${userId}/posts`,
           pageParam ? { searchParams: { cursor: pageParam } } : {},
         )
-        .json<PostsPage>(),
+        .json<PerwerdesPage>(),
     initialPageParam: null as string | null,
     getNextPageParam: (lastPage) => lastPage.nextCursor,
   });
