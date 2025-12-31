@@ -1,11 +1,13 @@
 // Bismillahirrahmanirrahim
 // Elhamdulillahirabbulalemin
-// Es-selatu vesselamu ala resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Es-selatu vesselamu ala resulina Muhammedin 
+// La ilahe illallah, SuphanAllah velhamdulillah, Allahu Ekber
+//Xeynî Allah xweda tune Hz Muhammed jî qûl û resulê Allah e.
 "use server";
 
 import { validateRequest } from "@/auth";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude } from "@/pirtukxane/types";
+import { getJiriyaSuniInclude } from "@/pirtukxane/types";
 import { createPostSchema } from "@/pirtukxane/validation";
 
 export async function submitPost(input: {
@@ -18,7 +20,7 @@ export async function submitPost(input: {
 
   const { content, mediaIds } = createPostSchema.parse(input);
 
-  const newPost = await prisma.mmavahi.create({
+  const newPost = await prisma.jiriyaSuni.create({
     data: {
       content, // Convert string[] to a single string
       userId: user.id,
@@ -26,7 +28,7 @@ export async function submitPost(input: {
         connect: mediaIds.map((id) => ({ id })),
       },
     },
-    include: getPostDataInclude(user.id),
+    include: getJiriyaSuniInclude(user.id),
   });
 
   return newPost;

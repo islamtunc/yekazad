@@ -1,4 +1,10 @@
-import { PostData } from "@/pirtukxane/types";
+// Bismillahirrahmanirrahim 
+// Elhamdulillahi Rabbil Alamin
+// Ve salatu ve selamu ala Resulina Muhammedin 
+// La ilahe illallah, Muhammedur Resulullah
+// SuphanAllah velhamdulillah, Allahu Ekber
+// Allah ümmetimizi korusun, birlik ve beraberliğimizi daim eylesin.
+import { JiriyaSuniData } from "@/pirtukxane/types";
 import { MoreHorizontal, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../ui/button";
@@ -11,7 +17,7 @@ import {
 import DeletePostDialog from "./DeletePostDialog";
 
 interface PostMoreButtonProps {
-  post: PostData;
+  post: JiriyaSuniData;
   className?: string;
 }
 

@@ -45,18 +45,20 @@ export function useSubmitPostMutation() {
         (oldData) => {
           const firstPage = oldData?.pages[0];
 
-          if (firstPage) {
+          if (firstPage && oldData) {
             return {
               pageParams: oldData.pageParams,
               pages: [
                 {
-                  posts: [newPost, ...firstPage.posts],
+                  jiriyaSunis: [newPost, ...firstPage.jiriyaSunis],
                   nextCursor: firstPage.nextCursor,
                 },
                 ...oldData.pages.slice(1),
               ],
             };
           }
+
+          return oldData;
         },
       );
 

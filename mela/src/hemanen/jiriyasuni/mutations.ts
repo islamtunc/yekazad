@@ -32,7 +32,7 @@ export function useDeletePostMutation() {
 
       await queryClient.cancelQueries(queryFilter);
 
-      queryClient.setQueriesData<InfiniteData<PostsPage, string | null>>(
+      queryClient.setQueriesData<InfiniteData<JiriyaSunisPage, string | null>>(
         queryFilter,
         (oldData) => {
           if (!oldData) return;
@@ -41,7 +41,7 @@ export function useDeletePostMutation() {
             pageParams: oldData.pageParams,
             pages: oldData.pages.map((page) => ({
               nextCursor: page.nextCursor,
-              posts: page.posts.filter((p) => p.id !== deletedPost.id),
+              jiriyaSunis: page.jiriyaSunis.filter((p) => p.id !== deletedPost.id),
             })),
           };
         },
