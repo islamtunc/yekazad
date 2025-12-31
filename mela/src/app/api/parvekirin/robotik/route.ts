@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
       return Response.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const posts = await prisma.mmkedkar.findMany({
+    const posts = await prisma.robotik.findMany({
       include: getRobotikInclude(user.id),
       orderBy: { createdAt: "desc" },
       take: pageSize + 1,
