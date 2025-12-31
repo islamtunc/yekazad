@@ -23,17 +23,17 @@ export async function GET(req: NextRequest) {
       return Response.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const posts = await prisma.mmhewcedari.findMany({
+    const pesdebirs = await prisma.pesdebir.findMany({
       include: getPesdebirInclude(user.id),
       orderBy: { createdAt: "desc" },
       take: pageSize + 1,
       cursor: cursor ? { id: cursor } : undefined,
     });
 
-    const nextCursor = posts.length > pageSize ? posts[pageSize].id : null;
+    const nextCursor = pesdebirs.length > pageSize ? pesdebirs[pageSize].id : null;
 
     const data: PesdebirsPage = {
-      posts: posts.slice(0, pageSize),
+      pesdebirs: pesdebirs.slice(0, pageSize),
       nextCursor,
     };
 
