@@ -34,7 +34,7 @@ export default function ForYouFeed() {
     getNextPageParam: (lastPage) => lastPage.nextCursor,
   });
 
-  const posts = data?.pages.flatMap((page) => page.posts) || [];
+  const posts = data?.pages.flatMap((page: any) => page.posts ?? []) || [];
 
   if (status === "pending") {
     return <PostsLoadingSkeleton />;
