@@ -1,8 +1,11 @@
 // Bismillahirrahmanirrahim
+// Elhamdulillahirabbilalemin
+// Es-selatu ve Es-selamu ala Resulina Muhammedin 
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
+// Süphanallah, Elhamdulillah, Allahu Ekber
 
 
-
-import { PostsPage } from "@/pirtukxane/types";
+import { MobilsPage } from "@/pirtukxane/types";
 import {
   InfiniteData,
   QueryFilters,
@@ -28,7 +31,7 @@ export function useDeletePostMutation() {
 
       await queryClient.cancelQueries(queryFilter);
 
-      queryClient.setQueriesData<InfiniteData<PostsPage, string | null>>(
+      queryClient.setQueriesData<InfiniteData<MobilsPage, string | null>>(
         queryFilter,
         (oldData) => {
           if (!oldData) return;
@@ -37,7 +40,7 @@ export function useDeletePostMutation() {
             pageParams: oldData.pageParams,
             pages: oldData.pages.map((page) => ({
               nextCursor: page.nextCursor,
-              posts: page.posts.filter((p) => p.id !== deletedPost.id),
+              mobils: page.mobils.filter((m) => m.id !== deletedPost.id),
             })),
           };
         },
