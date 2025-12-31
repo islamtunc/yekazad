@@ -99,7 +99,7 @@ function page() {
                     • Rolên hewce: Frontend (React/Next), Backend (Node/Next),
                     DevOps, Machine Learning, QA.
                     <br />
-                    • Proses: pêş-sivîk => teknikî interview => test kod => peyman.
+                    • Proses: pêş-sivîk =&gt; teknikî interview =&gt; test kod =&gt; peyman.
                     <br />
                     • Ji bo developers: portfolyoyên GitHub/GitLab û demo
                     projeyanê zêde bêne nirxandin.
