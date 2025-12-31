@@ -34,7 +34,10 @@ export default function ForYouFeed() {
     getNextPageParam: (lastPage) => lastPage.nextCursor,
   });
 
-  const posts = data?.pages.flatMap((page) => page.posts) || [];
+  const posts = data?.pages.flatMap((page) =>
+    // the API page shape may expose the list under different keys depending on the backend/type definition
+    ((page as any).posts ?? (page as any).pesdebirs ?? (page as any).items ?? (page as any).data ?? []) as any[],
+  ) || [];
 
   if (status === "pending") {
     return <PostsLoadingSkeleton />;
