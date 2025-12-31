@@ -23,19 +23,19 @@ export async function GET(req: NextRequest) {
       return Response.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const posts = await prisma.mmkinc.findMany({
+    const perwerdes = await prisma.perwerde.findMany({
       include: getPerwerdeInclude(user.id),
       orderBy: { createdAt: "desc" },
       take: pageSize + 1,
       cursor: cursor ? { id: cursor } : undefined,
     });
 
-    const nextCursor = posts.length > pageSize ? posts[pageSize].id : null;
+    const nextCursor = perwerdes.length > pageSize ? perwerdes[pageSize].id : null;
 
     const data: PerwerdesPage = {
-      posts: posts.slice(0, pageSize).map(post => ({
-        ...post,
-        content: Array.isArray(post.content) ? post.content : [post.content],
+      perwerdes: perwerdes.slice(0, pageSize).map((perwerde: any) => ({
+        ...perwerde,
+        content: Array.isArray(perwerde.content) ? perwerde.content : [perwerde.content],
       })),
       nextCursor,
     };
