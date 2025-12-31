@@ -26,15 +26,15 @@ export default function ForYouFeed() {
     queryFn: ({ pageParam }) =>
       kyInstance
         .get(
-          "/api/parvekirin/mmkargeh",
+          "/api/parvekirin/robotik",
           pageParam ? { searchParams: { cursor: pageParam } } : {},
         )
         .json<RobotiksPage>(),
     initialPageParam: null as string | null,
-    getNextPageParam: (lastPage) => lastPage.nextCursor,
+  getNextPageParam: (lastPage) => lastPage.nextCursor,
   });
 
-  const posts = data?.pages.flatMap((page) => page.posts) || [];
+  const posts = data?.pages.flatMap((page) => (page as any).posts ?? []) || [];
 
   if (status === "pending") {
     return <PostsLoadingSkeleton />;
