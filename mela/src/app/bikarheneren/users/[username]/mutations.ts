@@ -1,5 +1,11 @@
+// Bismillahirahmanirahim
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin 
+//Suphanallah, Elhamdulillah, Allahu Ekber
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
+"use client";
 import { useToast } from "@/hemanen/ui/use-toast";
-import { PostsPage } from "@/pirtukxane/types";
+import { PerwerdesPage } from "@/pirtukxane/types";
 import { useUploadThing } from "@/pirtukxane/uploadthing";
 import { UpdateUserProfileValues } from "@/pirtukxane/validation";
 import {
@@ -42,7 +48,7 @@ export function useUpdateProfileMutation() {
 
       await queryClient.cancelQueries(queryFilter);
 
-      queryClient.setQueriesData<InfiniteData<PostsPage, string | null>>(
+      queryClient.setQueriesData<InfiniteData<PerwerdesPage, string | null>>(
         queryFilter,
         (oldData) => {
           if (!oldData) return;
@@ -51,7 +57,7 @@ export function useUpdateProfileMutation() {
             pageParams: oldData.pageParams,
             pages: oldData.pages.map((page) => ({
               nextCursor: page.nextCursor,
-              posts: page.posts.map((post) => {
+              perwerdes: page.perwerdes.map((post) => {
                 if (post.user.id === updatedUser.id) {
                   return {
                     ...post,
