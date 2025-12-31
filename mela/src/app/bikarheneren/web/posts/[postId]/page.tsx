@@ -1,5 +1,9 @@
 // Bismillahirrahmanirrahim
-
+// Elhamdulillahi Rabbil Alamin
+// Ve salatu ve selamu ala Resulina Muhammedin 
+// La ilahe illallah, Muhammedur Resulullah
+// SuphanAllah velhamdulillah, Allahu Ekber
+// Allah ümmetimizi korusun, birlik ve beraberliğimizi daim eylesin.
 
 
 import { validateRequest } from "@/auth";
@@ -8,7 +12,7 @@ import Post from "@/hemanen/web/Post";
 import UserAvatar from "@/hemanen/UserAvatar";
 import UserTooltip from "@/hemanen/UserTooltip";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude, UserData } from "@/pirtukxane/types";
+import { getWebInclude, UserData } from "@/pirtukxane/types";
 import { Loader2 } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -20,11 +24,11 @@ interface PageProps {
 }
 
 const getPost = cache(async (postId: string, loggedInUserId: string) => {
-  const post = await prisma.mmavahi.findUnique({
+  const post = await prisma.web.findUnique({
     where: {
       id: postId,
     },
-    include: getPostDataInclude(loggedInUserId),
+    include: getWebInclude(loggedInUserId),
   });
 
   if (!post) notFound();
