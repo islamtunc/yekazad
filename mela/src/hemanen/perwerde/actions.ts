@@ -1,7 +1,7 @@
 // Bismillahirrahmanirahim
 // Elhamdu lillahi rabbil alamin
 // Esselatu vesselamu ala rasulillah 
-// La ilahe illallah
+// La ilahe illallah Muhammeden abduhu ve resuluhu
 // Subhanallah, Elhamdulillah, Allahu Ekber
 
 
@@ -16,7 +16,7 @@ export async function deletePost(id: string) {
 
   if (!user) throw new Error("Unauthorized");
 
-  const post = await prisma.post.findUnique({
+  const post = await prisma.perwerde.findUnique({
     where: { id },
   });
 
