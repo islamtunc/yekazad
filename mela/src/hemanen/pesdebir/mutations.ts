@@ -40,7 +40,7 @@ export function useDeletePostMutation() {
             pageParams: oldData.pageParams,
             pages: oldData.pages.map((page) => ({
               nextCursor: page.nextCursor,
-              posts: page.posts.filter((p) => p.id !== deletedPost.id),
+              pesdebirs: page.pesdebirs.filter((p) => p.id !== deletedPost.id),
             })),
           };
         },
