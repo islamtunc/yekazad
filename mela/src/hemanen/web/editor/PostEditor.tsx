@@ -183,9 +183,9 @@ function AttachmentPreviews({
     <div className="flex flex-col gap-3">
       {attachments.map((attachment) => (
         <AttachmentPreview
-          key={attachment.id}
+          key={attachment.file.name}
           attachment={attachment}
-          onRemoveClick={() => removeAttachment(attachment.id)}
+          onRemoveClick={() => removeAttachment(attachment.file.name)}
         />
       ))}
     </div>
