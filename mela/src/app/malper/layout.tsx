@@ -39,10 +39,11 @@ export default async function Layout({
           right: 24,
           bottom: 24,
           zIndex: 1000,
+          
           color: "#fff",
           borderRadius: "50%",
-          width: 56,
-          height: 56,
+          width: 61,
+          height: 61,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
