@@ -59,7 +59,7 @@ export async function login(
     // Redirect based on role: admins -> "/", regular users -> "/bikarhn"
         const isAdmin = existingUser.role === "ADMIN";
     
-        return redirect(isAdmin ? "/" : "/(revebir)");
+        return redirect(isAdmin ? "/" : "/");
   } catch (error) {
     if (isRedirectError(error)) throw error;
     console.error(error);
