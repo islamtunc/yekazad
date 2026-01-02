@@ -65,6 +65,7 @@ export default async function Layout({
           bottom: 24,
           zIndex: 1000,
           color: "#fff",
+          backgroundColor: "#20be20ff",
           borderRadius: "50%",
           width: 56,
           height: 56,
