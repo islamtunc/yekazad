@@ -23,7 +23,16 @@ export default async function BikarhenerenLayout({
 }) {
   const session = await validateRequest();
 
-  if (!session.user) redirect("/malper");
+  // fetch the DB user to check role
+  const { getCurrentDbUser } = await import("@/auth");
+  const dbUser = await getCurrentDbUser();
+
+  if (!session.user || !dbUser) redirect("/malper");
+
+  // admins should be sent to the admin area
+  if (dbUser.role === "ADMIN") {
+    redirect("/(revebir)");
+  }
 
   return (
     <SessionProvider value={session}>

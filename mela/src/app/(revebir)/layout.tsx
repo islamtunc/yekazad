@@ -23,7 +23,16 @@ export default async function Layout({
 }) {
   const session = await validateRequest();
 
-  if (!session.user) redirect("/malper");
+  // fetch the DB user to check role
+  const { getCurrentDbUser } = await import("@/auth");
+  const dbUser = await getCurrentDbUser();
+
+  if (!session.user || !dbUser) redirect("/malper");
+
+  // only admins should access this area
+  if (dbUser.role !== "ADMIN") {
+    redirect("/bikarheneren");
+  }
 
   return (
     <SessionProvider value={session}>
