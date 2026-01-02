@@ -21,7 +21,7 @@ function AdminPage() {
             <Card.Body>
               <Card.Title>Products Page</Card.Title>
               <Card.Text>Manage or view the sports nutrition page.</Card.Text>
-              <Button variant="primary" href="/mmavahi">
+              <Button variant="primary" href="/web">
                 Go
               </Button>
             </Card.Body>
@@ -32,7 +32,7 @@ function AdminPage() {
             <Card.Body>
               <Card.Title>Courses Page</Card.Title>
               <Card.Text>Manage or view the courses page.</Card.Text>
-              <Button variant="primary" href="/mmkinc">
+              <Button variant="primary" href="/perwerde">
                 Go
               </Button>
             </Card.Body>
@@ -43,7 +43,7 @@ function AdminPage() {
             <Card.Body>
               <Card.Title>Services</Card.Title>
               <Card.Text>Manage or view the services page.</Card.Text>
-              <Button variant="primary" href="/mmkargeh">
+              <Button variant="primary" href="/jiriyasuni">
                 Go
               </Button>
             </Card.Body>
@@ -57,7 +57,7 @@ function AdminPage() {
             <Card.Body>
               <Card.Title>References</Card.Title>
               <Card.Text>Manage or view the references page.</Card.Text>
-              <Button variant="primary" href="/mmwesayit">
+              <Button variant="primary" href="/robotik">
                 Go
               </Button>
             </Card.Body>
@@ -68,7 +68,7 @@ function AdminPage() {
             <Card.Body>
               <Card.Title>For Developers</Card.Title>
               <Card.Text>Manage or view the developer resources page.</Card.Text>
-              <Button variant="primary" href="/mmkedkar">
+              <Button variant="primary" href="/pesdebir">
                 Go
               </Button>
             </Card.Body>
