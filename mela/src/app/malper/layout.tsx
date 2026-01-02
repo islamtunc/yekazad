@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Footer from "./heman/mmbingeh";
 import AssistantRoot from "./assistant";
 import ContactForm from "./heman/mmfrm";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaMobile, FaWhatsapp } from "react-icons/fa";
 
 
 
@@ -79,7 +79,9 @@ export default async function Layout({
         }}
         title="Call us"
       >
-        <span role="img" aria-label="Phone">📞</span>
+        <span role="img" aria-label="Phone">
+          <FaMobile />
+        </span>
       </a>
 
       <ContactForm />
