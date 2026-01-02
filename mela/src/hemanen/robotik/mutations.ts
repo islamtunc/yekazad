@@ -5,7 +5,7 @@
 // Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin
 
 
-import { RobotikPage } from "@/pirtukxane/types";
+import { RobotiksPage } from "@/pirtukxane/types";
 import {
   InfiniteData,
   QueryFilters,
@@ -31,7 +31,7 @@ export function useDeletePostMutation() {
 
       await queryClient.cancelQueries(queryFilter);
 
-      queryClient.setQueriesData<InfiniteData<RobotikPage, string | null>>(
+      queryClient.setQueriesData<InfiniteData<RobotiksPage, string | null>>(
         queryFilter,
         (oldData) => {
           if (!oldData) return;
@@ -40,9 +40,9 @@ export function useDeletePostMutation() {
             pageParams: oldData.pageParams,
             pages: oldData.pages.map((page) => ({
               nextCursor: page.nextCursor,
-              posts: page.posts.filter((p) => p.id !== deletedPost.id),
+              robotiks: page.robotiks.filter((r) => r.id !== deletedPost.id),
             })),
-          };
+          } as InfiniteData<RobotiksPage, string | null>;
         },
       );
 
