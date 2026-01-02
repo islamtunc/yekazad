@@ -43,20 +43,24 @@ export function useSubmitPostMutation() {
       queryClient.setQueriesData<InfiniteData<PesdebirsPage, string | null>>(
         queryFilter,
         (oldData) => {
-          const firstPage = oldData?.pages[0];
+          if (!oldData) return oldData;
+
+          const firstPage = oldData.pages[0];
 
           if (firstPage) {
             return {
               pageParams: oldData.pageParams,
               pages: [
                 {
-                  posts: [newPost, ...firstPage.posts],
+                  pesdebirs: [newPost, ...firstPage.pesdebirs],
                   nextCursor: firstPage.nextCursor,
                 },
                 ...oldData.pages.slice(1),
               ],
             };
           }
+
+          return oldData;
         },
       );
 
