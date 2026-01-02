@@ -6,14 +6,14 @@
 // La ilahe illallah, Muhammedur Resulullah
 // Allah U Ekber ve lillahi'l-hamd
 
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/pirtukxane/prisma";
 import { requireAdmin } from "@/auth";
 
-export async function GET(req: NextRequest) {
+export async function GET(req: NextRequest): Promise<Response> {
   // ensure the caller is an admin
   const adminCheck = await requireAdmin();
-  if ((adminCheck as any)?.status) return adminCheck;
+  if (adminCheck instanceof NextResponse) return adminCheck;
 
   const users = await prisma.user.findMany({
     select: {
@@ -32,9 +32,9 @@ export async function GET(req: NextRequest) {
   return Response.json({ users });
 }
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest): Promise<Response> {
   const adminCheck = await requireAdmin();
-  if ((adminCheck as any)?.status) return adminCheck;
+  if (adminCheck instanceof NextResponse) return adminCheck;
 
   const body = await req.json().catch(() => ({}));
   const { userId, role } = body as { userId?: string; role?: string };
