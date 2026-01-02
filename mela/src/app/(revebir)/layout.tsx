@@ -12,7 +12,7 @@ import { validateRequest } from "@/auth";
 import { redirect } from "next/navigation";
 import MenuBar from "./MenuBar";
 import Navbar from "./Navbar";
-import SessionProvider from "./SessionProvider";
+import BikarhenerenSessionProvider from "./SessionProvider";
 
 import 'bootstrap/dist/css/bootstrap.css'
 import { Row, Col, Alert } from "react-bootstrap";
@@ -34,8 +34,11 @@ export default async function Layout({
     redirect("/bikarheneren");
   }
 
+  // create a session object compatible with the provider (include role on user)
+  const sessionWithRole = { ...session, user: { ...session.user, role: "ADMIN" } };
+
   return (
-    <SessionProvider value={session}>
+    <BikarhenerenSessionProvider value={sessionWithRole}>
       <div
         className="flex min-h-screen flex-col"
         style={{ backgroundColor: "#22c55e" /* Tailwind'in green-500 tonu, beyazla uyumlu canlı bir yeşil */ }}
@@ -84,7 +87,7 @@ export default async function Layout({
           <Footer />
         </div>
       </div>
-    </SessionProvider>
+    </BikarhenerenSessionProvider>
   );
 }
 

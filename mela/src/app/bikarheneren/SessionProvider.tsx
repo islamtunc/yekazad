@@ -12,8 +12,10 @@ import { Session, User } from "lucia";
 import React, { createContext, useContext } from "react";
 
 interface SessionContext {
-  user: User;
-  session: Session;
+  // user may include a role field added by the layouts; keep it flexible
+  user: User & { role?: string };
+  // session may be a partial object in some server-side callers
+  session: Partial<Session>;
 }
 
 const SessionContext = createContext<SessionContext | null>(null);
