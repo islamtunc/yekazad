@@ -1,13 +1,13 @@
 // Bismillahirrahmanirrahim 
 // Elhamdulillahirabbulalemin
-// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Es-selatu vesselamu ala rasulina Muhammedin 
 // Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 // SuphanAllah, Elhamdulillah, Allahu Ekber
 
 
 "use client";
 
-import { PostData } from "@/pirtukxane/types";
+import { WebData } from "@/pirtukxane/types";
 import { cn, formatRelativeDate } from "@/pirtukxane/utils";
 import { Media } from "@prisma/client";
 import { MessageSquare } from "lucide-react";
@@ -18,7 +18,7 @@ import UserAvatar from "../UserAvatar";
 
 
 interface PostProps {
-  post: PostData;
+  post: WebData;
 }
 
 export default function MmmPost({ post }: PostProps) {
