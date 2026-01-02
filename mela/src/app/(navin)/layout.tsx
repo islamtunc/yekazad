@@ -12,7 +12,7 @@ import { validateRequest } from "@/auth";
 import { redirect } from "next/navigation";
 import MenuBar from "./revebir/MenuBar";
 import Navbar from "./revebir/Navbar";
-import SessionProvider from "./SessionProvider";
+import SessionProvider from "@/app/(navin)/SessionProvider";
 
 import 'bootstrap/dist/css/bootstrap.css'
 import { Row, Col, Alert } from "react-bootstrap";
