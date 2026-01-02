@@ -47,7 +47,6 @@ export default async function Layout({
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          boxShadow: "0 2px 8px rgba(37,211,102,0.18)",
           fontSize: 28,
           textDecoration: "none",
         }}
