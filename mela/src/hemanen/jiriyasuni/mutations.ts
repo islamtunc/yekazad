@@ -52,7 +52,10 @@ export function useDeletePostMutation() {
       });
 
       if (pathname === `/posts/mmwesayit/${deletedPost.id}`) {
-        router.push(`/users/${deletedPost.user.username}`);
+        const user = (deletedPost as any).user;
+        if (user?.username) {
+          router.push(`/users/${user.username}`);
+        }
       }
     },
     onError(error) {
