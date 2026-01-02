@@ -13,9 +13,9 @@ import React, { createContext, useContext } from "react";
 
 interface SessionContext {
   // user may include a role field added by the layouts; keep it flexible
-  user: User & { role?: string };
+  user: (User & { role?: string }) | null;
   // session may be a partial object in some server-side callers
-  session: Partial<Session>;
+  session: Partial<Session> | null;
 }
 
 const SessionContext = createContext<SessionContext | null>(null);
@@ -31,8 +31,10 @@ export default function BikarhenerenSessionProvider({
 
 export function useSession() {
   const context = useContext(SessionContext);
+  // Return a safe fallback instead of throwing so components that render
+  // outside a provider don't crash (they should handle null user/session).
   if (!context) {
-    throw new Error("useSession must be used within a SessionProvider");
+    return { user: null, session: null } as SessionContext;
   }
   return context;
 }
