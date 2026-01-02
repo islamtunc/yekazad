@@ -1,8 +1,12 @@
+// Bismillahirrahmanirrahim
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala resulina Muhammedin 
+// La ilahe illallah, SuphanAllah velhamdulillah, Allahu Ekber
+//Xeynî Allah xweda tune Hz Muhammed jî qûl û resulê Allah e.
 
 
 
-
-import { PostsPage } from "@/pirtukxane/types";
+import { PerwerdesPage } from "@/pirtukxane/types";
 import {
   InfiniteData,
   QueryFilters,
@@ -28,7 +32,7 @@ export function useDeletePostMutation() {
 
       await queryClient.cancelQueries(queryFilter);
 
-      queryClient.setQueriesData<InfiniteData<PostsPage, string | null>>(
+      queryClient.setQueriesData<InfiniteData<PerwerdesPage, string | null>>(
         queryFilter,
         (oldData) => {
           if (!oldData) return;
