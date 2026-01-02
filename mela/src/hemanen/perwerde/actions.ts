@@ -1,6 +1,6 @@
 // Bismillahirrahmanirahim
 // Elhamdu lillahi rabbil alamin
-// Esselatu vesselamu ala rasulillah ve ala alihi ve sahbihi ecmain
+// Esselatu vesselamu ala rasulillah 
 // La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
 
@@ -9,7 +9,7 @@
 
 import { validateRequest } from "@/auth";
 import prisma from "@/pirtukxane/prisma";
-import { getPostDataInclude } from "@/pirtukxane/types";
+import { getPerwerdeInclude } from "@/pirtukxane/types";
 
 export async function deletePost(id: string) {
   const { user } = await validateRequest();
@@ -26,7 +26,7 @@ export async function deletePost(id: string) {
 
   const deletedPost = await prisma.post.delete({
     where: { id },
-    include: getPostDataInclude(user.id),
+    include: getPerwerdeInclude(user.id),
   });
 
   return deletedPost;

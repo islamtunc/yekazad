@@ -1,4 +1,9 @@
-import { PostData } from "@/pirtukxane/types";
+// Bismillahirrahmanirrahim
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala resulina Muhammedin 
+// La ilahe illallah, SuphanAllah velhamdulillah, Allahu Ekber
+//Xeynî Allah xweda tune Hz Muhammed jî qûl û resulê Allah e.
+import { PerwerdeData } from "@/pirtukxane/types";
 import { MoreHorizontal, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../ui/button";
@@ -11,7 +16,7 @@ import {
 import DeletePostDialog from "./DeletePostDialog";
 
 interface PostMoreButtonProps {
-  post: PostData;
+  post: PerwerdeData;
   className?: string;
 }
 

@@ -1,4 +1,10 @@
-import { PostData } from "@/pirtukxane/types";
+// Bismillahirrahmanirrahim
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala resulina Muhammedin 
+// La ilahe illallah, SuphanAllah velhamdulillah, Allahu Ekber
+//Xeynî Allah xweda tune Hz Muhammed jî qûl û resulê Allah e.
+
+import { PerwerdeData } from "@/pirtukxane/types";
 import LoadingButton from "../LoadingButton";
 import { Button } from "../ui/button";
 import {
@@ -12,7 +18,7 @@ import {
 import { useDeletePostMutation } from "./mutations";
 
 interface DeletePostDialogProps {
-  post: PostData;
+  post: PerwerdeData;
   open: boolean;
   onClose: () => void;
 }
