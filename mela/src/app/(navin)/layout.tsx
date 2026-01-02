@@ -10,9 +10,9 @@
 
 import { validateRequest } from "@/auth";
 import { redirect } from "next/navigation";
-import MenuBar from "./MenuBar";
-import Navbar from "./Navbar";
-import BikarhenerenSessionProvider from "./SessionProvider";
+import MenuBar from "./revebir/MenuBar";
+import Navbar from "./revebir/Navbar";
+import SessionProvider from "./SessionProvider";
 
 import 'bootstrap/dist/css/bootstrap.css'
 import { Row, Col, Alert } from "react-bootstrap";
@@ -38,7 +38,7 @@ export default async function Layout({
   const sessionWithRole = { ...session, user: { ...session.user, role: "ADMIN" } };
 
   return (
-    <BikarhenerenSessionProvider value={sessionWithRole}>
+    <SessionProvider>
       <div
         className="flex min-h-screen flex-col"
         style={{ backgroundColor: "#22c55e" /* Tailwind'in green-500 tonu, beyazla uyumlu canlı bir yeşil */ }}
@@ -87,7 +87,7 @@ export default async function Layout({
           <Footer />
         </div>
       </div>
-    </BikarhenerenSessionProvider>
+    </SessionProvider>
   );
 }
 

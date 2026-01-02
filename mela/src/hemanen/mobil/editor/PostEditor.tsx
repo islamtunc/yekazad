@@ -3,7 +3,7 @@
 // Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain.
 "use client";
 
-import { useSession } from "@/app/(revebir)/SessionProvider";
+import { useSession } from "@/app/(navin)/SessionProvider";
 import LoadingButton from "@/hemanen/LoadingButton";
 import { Button } from "@/hemanen/ui/button";
 import UserAvatar from "@/hemanen/UserAvatar";

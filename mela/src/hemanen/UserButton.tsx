@@ -8,7 +8,7 @@
 "use client";
 
 import { logout } from "@/app/(auth)/actions";
-import { useSession } from "@/app/(revebir)/SessionProvider";
+import { useSession } from "@/app/(navin)/SessionProvider";
 import { cn } from "@/pirtukxane/utils";
 import { useQueryClient } from "@tanstack/react-query";
 import { Check, LogOutIcon, Monitor, Moon, Sun, UserIcon } from "lucide-react";

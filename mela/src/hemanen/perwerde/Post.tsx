@@ -4,7 +4,7 @@
 // La ilahe illallah, SuphanAllah velhamdulillah, Allahu Ekber
 "use client";
 
-import { useSession } from "@/app/(revebir)/SessionProvider";
+import { useSession } from "@/app/(navin)/SessionProvider";
 import { PerwerdeData } from "@/pirtukxane/types";
 import { cn, formatRelativeDate } from "@/pirtukxane/utils";
 import { Media } from "@prisma/client";

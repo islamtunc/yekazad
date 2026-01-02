@@ -6,7 +6,7 @@
 // Allah ümmetimizi korusun, birlik ve beraberliğimizi daim eylesin.
 
 
-import { useSession } from "@/app/(revebir)/SessionProvider";
+import { useSession } from "@/app/(navin)/SessionProvider";
 import { useToast } from "@/hemanen/ui/use-toast";
 import { JiriyaSunisPage } from "@/pirtukxane/types";
 import {

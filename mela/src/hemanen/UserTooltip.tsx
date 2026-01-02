@@ -7,7 +7,7 @@
 
 "use client";
 
-import { useSession } from "@/app/(revebir)/SessionProvider";
+import { useSession } from "@/app/(navin)/SessionProvider";
 import {  UserData } from "@/pirtukxane/types";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
