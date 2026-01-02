@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Footer from "./heman/mmbingeh";
 import AssistantRoot from "./assistant";
 import ContactForm from "./heman/mmfrm";
+import { FaWhatsapp } from "react-icons/fa";
 
 
 
@@ -53,7 +54,7 @@ export default async function Layout({
         title="WhatsApp"
       >
         <span role="img" aria-label="WhatsApp">
-          💬
+          <FaWhatsapp />
         </span>
       </a>
 
