@@ -1,6 +1,6 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirrabbulalemin
-// Esselatu vesselamu ala seyyidina Muhammedin ve ala alihi ve sahbihi ecmain
+// Esselatu vesselamu ala seyyidina Muhammedin 
 // Subhanallah, Elhamdulillah, Allahu Ekber
 // La ilahe illallah 
 // Allahu Ekber, Allahu Ekber, Allahu Ekber, La ilahe illallah
@@ -31,6 +31,10 @@ export const lucia = new Lucia(adapter, {
       displayName: databaseUserAttributes.displayName,
       avatarUrl: databaseUserAttributes.avatarUrl,
       googleId: databaseUserAttributes.googleId,
+      // role is pulled from the database user record. Values should be added
+      // via a Prisma migration (e.g. Role enum). Default role can be
+      // 'BIKARHENER' (regular user) or 'REVEBIR' (admin/manager).
+      role: (databaseUserAttributes as any).role,
     };
   },
 });
@@ -48,6 +52,9 @@ interface DatabaseUserAttributes {
   displayName: string;
   avatarUrl: string | null;
   googleId: string | null;
+  // role stored in the database (e.g. an enum). May be undefined until you
+  // run the Prisma migration to add the role column.
+  role?: string | null;
 }
 
 export const google = new Google(

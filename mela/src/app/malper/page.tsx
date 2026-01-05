@@ -1,8 +1,8 @@
 // Bismillahirahmanirahim
 // Elhamdulillahirrabbulalemin
-// Esselatu vesselamu ala seyyidina Muhammedin ve ala alihi ve sahbihi ecmain
+// Esselatu vesselamu ala seyyidina Muhammedin 
 // Elhamdulillahirabbulalemin
-// Ve salatu ve selamu ala resulina Muhammedin ve alihi ve sahbihi ecmain
+// Ve salatu ve selamu ala resulina Muhammedin 
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
 // Estağfirullah El-Azim
@@ -26,10 +26,10 @@ function page() {
               alt="Build Your Website"
               className="w-full h-32 object-cover rounded-t-lg mb-4"
             />
-            <h3 className="text-xl font-bold mb-2">Build Your Website</h3>
+            <h3 className="text-xl font-bold mb-2"> Website ya  xwe çêkin</h3>
             <p className="text-gray-600">Build your website with our easy-to-use templates.</p>
-            <a href="/malper/mmavahi/mmmweb" className="text-blue-500 hover:underline mt-4 block">
-              View Templates and Start Building
+            <a href="/malper/" className="text-blue-500 hover:underline mt-4 block">
+              
             </a>
           </div>
 

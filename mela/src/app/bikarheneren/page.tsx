@@ -10,7 +10,7 @@
 import React from "react";
 import { Alert, Container, Row, Col, Card, Button } from "react-bootstrap";
 
-function AdminPage() {
+function BikarhenerPage() {
   return (
     <Container fluid style={{ background: "#f8f9fa", minHeight: "100vh", padding: "20px" }}>
      
@@ -19,7 +19,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Products Page</Card.Title>
+              <Card.Title>Java Hîn Bin</Card.Title>
               <Card.Text>Manage or view the sports nutrition page.</Card.Text>
               <Button variant="primary" href="/mmavahi">
                 Go
@@ -90,4 +90,4 @@ function AdminPage() {
   );
 }
 
-export default AdminPage;
+export default BikarhenerPage;
