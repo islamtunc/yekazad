@@ -1,5 +1,12 @@
 // Bismillahirahmanirahim 
-
+// ElHAMDULİLLAHİRABBULALEMİN
+// Es-selatu ve Es-selamu ala Resulina Muhammedin 
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
+// SubhanAllah, Elhamdulillah, Allahu Ekber
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
+// Subhanallah , Elhamdulillah, Allahu Ekber
+// Hasbunallahu ve ni'mel vekil
+// La havle ve la kuvvete illa billahil aliyyil azim
 
 
 
@@ -9,7 +16,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import LoginForm from "./LoginForm";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/hemanen/ui/button";
 
 export const metadata: Metadata = {
   title: "Giriş Yap",
@@ -32,7 +39,7 @@ export default function Page() {
   
 <Button>
             <Link href="/malper" className="block text-center hover:underline">
-              Home
+              Malper
         
             </Link>
 
