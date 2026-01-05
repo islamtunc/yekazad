@@ -1,5 +1,5 @@
 // Elhamdulillahirrabbulalemin
-// Esselatu vesselamu ala seyyidina Muhammedin ve ala alihi ve sahbihi ecmain
+// Esselatu vesselamu ala seyyidina Muhammedin 
 // Subhanallah, Elhamdulillah, Allahu Ekber
 // La ilahe illallah 
 // Allahu Ekber, Allahu Ekber, Allahu Ekber, La ilahe illallah
@@ -9,8 +9,8 @@
 "use server";
 
 import { lucia } from "@/auth";
-import prisma from "@/lib/prisma";
-import { signUpSchema, SignUpValues } from "@/lib/validation";
+import prisma from "@/pirtukxane/prisma";
+import { signUpSchema, SignUpValues } from "@/pirtukxane/validation";
 import { hash } from "@node-rs/argon2";
 import { generateIdFromEntropySize } from "lucia";
 import { isRedirectError } from "next/dist/client/components/redirect";

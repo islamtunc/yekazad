@@ -1,6 +1,6 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
-// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Es-selatu vesselamu ala rasulina Muhammedin 
 // La havle ve la kuvvete illa billahil aliyyil azim
 // Allah u Ekber
 // La ilahe illallah Muhammedur Resulullah
@@ -19,10 +19,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Products Page</Card.Title>
-              <Card.Text>Manage or view the sports nutrition page.</Card.Text>
+              <Card.Title>Rûpela Hilberan</Card.Title>
+              <Card.Text>Rûpela xwarinên sportî rêveberî an temaşe bikin.</Card.Text>
               <Button variant="primary" href="/web">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>
@@ -30,10 +30,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Courses Page</Card.Title>
-              <Card.Text>Manage or view the courses page.</Card.Text>
+              <Card.Title>Rûpela Dersan</Card.Title>
+              <Card.Text>Rûpela dersan rêveberî an temaşe bikin.</Card.Text>
               <Button variant="primary" href="/perwerde">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>
@@ -41,10 +41,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Services</Card.Title>
-              <Card.Text>Manage or view the services page.</Card.Text>
+              <Card.Title>Xizmetan</Card.Title>
+              <Card.Text>Rûpela xizmetan rêveberî an temaşe bikin.</Card.Text>
               <Button variant="primary" href="/jiriyasuni">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>
@@ -55,10 +55,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>References</Card.Title>
-              <Card.Text>Manage or view the references page.</Card.Text>
+              <Card.Title>Referansan</Card.Title>
+              <Card.Text>Rûpela referansan rêveberî an temaşe bikin.</Card.Text>
               <Button variant="primary" href="/robotik">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>
@@ -66,10 +66,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>For Developers</Card.Title>
-              <Card.Text>Manage or view the developer resources page.</Card.Text>
+              <Card.Title>Bo Pêşkeftkaran</Card.Title>
+              <Card.Text>Rûpela seranserên pêşkeftkaran rêveberî an temaşe bikin.</Card.Text>
               <Button variant="primary" href="/pesdebir">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>
@@ -77,10 +77,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Site Management</Card.Title>
-              <Card.Text>Manage or view the site.</Card.Text>
+              <Card.Title>Rêveberiya Malperê</Card.Title>
+              <Card.Text>Malperê rêveberî an temaşe bikin.</Card.Text>
               <Button variant="primary" href="/malper">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>

@@ -1,10 +1,17 @@
 // Bismillahirahmanirahim 
-
+// ElHAMDULİLLAHİRABBULALEMİN
+// Es-selatu ve Es-selamu ala Resulina Muhammedin 
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
+// SubhanAllah, Elhamdulillah, Allahu Ekber
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
+// Subhanallah , Elhamdulillah, Allahu Ekber
+// Hasbunallahu ve ni'mel vekil
+// La havle ve la kuvvete illa billahil aliyyil azim
 
 "use client";
 
-import LoadingButton from "@/components/LoadingButton";
-import { PasswordInput } from "@/components/PasswordInput";
+import LoadingButton from "@/hemanen/LoadingButton";
+import { PasswordInput } from "@/hemanen/PasswordInput";
 import {
   Form,
   FormControl,
@@ -12,9 +19,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { loginSchema, LoginValues } from "@/lib/validation";
+} from "@/hemanen/ui/form";
+import { Input } from "@/hemanen/ui/input";
+import { loginSchema, LoginValues } from "@/pirtukxane/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";

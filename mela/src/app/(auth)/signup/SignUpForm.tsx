@@ -1,6 +1,6 @@
 // Bismillahirahmanirahim
 // Elhamdulillahirrabbulalemin
-// Esselatu vesselamu ala seyyidina Muhammedin ve ala alihi ve sahbihi ecmain
+// Esselatu vesselamu ala seyyidina Muhammedin 
 // Subhanallah, Elhamdulillah, Allahu Ekber
 // La ilahe illallah 
 // Allahu Ekber, Allahu Ekber, Allahu Ekber, La ilahe illallah
@@ -8,8 +8,8 @@
 // Xeyni Allah tu Xweda tune
 "use client";
 
-import LoadingButton from "@/components/LoadingButton";
-import { PasswordInput } from "@/components/PasswordInput";
+import LoadingButton from "@/hemanen/LoadingButton";
+import { PasswordInput } from "@/hemanen/PasswordInput";
 import {
   Form,
   FormControl,
@@ -17,9 +17,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { signUpSchema, SignUpValues } from "@/lib/validation";
+} from "@/hemanen/ui/form";
+import { Input } from "@/hemanen/ui/input";
+import { signUpSchema, SignUpValues } from "@/pirtukxane/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";

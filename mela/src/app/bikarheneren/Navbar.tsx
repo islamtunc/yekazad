@@ -61,14 +61,14 @@ export default function Navbar() {
             className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center"
             onClick={() => setMenuOpen(false)}
           >
-            Dashboard
+            Perwerde
           </Link>
           <Link
             href="/mmbikarh"
             className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center"
             onClick={() => setMenuOpen(false)}
           >
-            Kullanıcılar
+            Mobil
           </Link>
 
           {/* Blog ve Ayarlar Dropdownlarını mobilde alt alta, masaüstünde yan yana göster */}

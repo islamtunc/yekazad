@@ -19,10 +19,10 @@ function BikarhenerPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Java Hîn Bin</Card.Title>
-              <Card.Text>Manage or view the sports nutrition page.</Card.Text>
+              <Card.Title>Java Hîn Bûn</Card.Title>
+              <Card.Text>Java fêr bûn — dersan an nimûneyan temaşe an rêveberî bikin.</Card.Text>
               <Button variant="primary" href="/mmavahi">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>
@@ -30,10 +30,10 @@ function BikarhenerPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Courses Page</Card.Title>
-              <Card.Text>Manage or view the courses page.</Card.Text>
+              <Card.Title>Rûpela Dersan</Card.Title>
+              <Card.Text>Dersan temaşe an rêveberî bikin.</Card.Text>
               <Button variant="primary" href="/mmkinc">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>
@@ -41,10 +41,10 @@ function BikarhenerPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Services</Card.Title>
-              <Card.Text>Manage or view the services page.</Card.Text>
+              <Card.Title>Xizmetan</Card.Title>
+              <Card.Text>Rûpela xizmetan temaşe an rêveberî bikin.</Card.Text>
               <Button variant="primary" href="/mmkargeh">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>
@@ -55,10 +55,10 @@ function BikarhenerPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>References</Card.Title>
-              <Card.Text>Manage or view the references page.</Card.Text>
+              <Card.Title>Referansan</Card.Title>
+              <Card.Text>Referansan temaşe an rêveberî bikin.</Card.Text>
               <Button variant="primary" href="/mmwesayit">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>
@@ -66,10 +66,10 @@ function BikarhenerPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>For Developers</Card.Title>
-              <Card.Text>Manage or view the developer resources page.</Card.Text>
+              <Card.Title>Bo Pêşkeftkaran</Card.Title>
+              <Card.Text>Seranserên pêşkeftkaran temaşe an rêveberî bikin.</Card.Text>
               <Button variant="primary" href="/mmkedkar">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>
@@ -77,10 +77,10 @@ function BikarhenerPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Site Management</Card.Title>
-              <Card.Text>Manage or view the site.</Card.Text>
+              <Card.Title>Rêveberiya Malperê</Card.Title>
+              <Card.Text>Malperê temaşe an rêveberî bikin.</Card.Text>
               <Button variant="primary" href="/malper">
-                Go
+                Herin
               </Button>
             </Card.Body>
           </Card>
