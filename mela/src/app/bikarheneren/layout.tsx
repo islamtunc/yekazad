@@ -25,6 +25,10 @@ export default async function BikarhenerenLayout({
 
   if (!session.user) redirect("/malper");
 
+  // block disabled users (disabled field is added to lucia user attributes)
+  const disabled = (session.user as any)?.disabled ?? false;
+  if (disabled) redirect("/malper");
+
   return (
     <SessionProvider value={session}>
       <div
@@ -37,13 +41,7 @@ export default async function BikarhenerenLayout({
           {/* Sol MenuBar kaldırıldı */}
           <div className="flex-1 flex flex-col">
            
-            <Row>
-        <Col>
-          <Alert variant="success" style={{ textAlign: "center", fontSize: "18px" }}>
-            Selam Aleykum dear Customer or Developer, Welcome to Admin Panel
-          </Alert>
-        </Col>
-      </Row>
+       
 
       <Row className="mb-4">
         <Col>

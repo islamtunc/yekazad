@@ -1,6 +1,6 @@
 // Bismillahirahmanirahim
 // Elhamdulillahirrabbulalemin
-// Esselatu vesselamu ala seyyidina Muhammedin 
+// Esselatu vesselamu ala seyyidina Muhammedin
 // Elhamdulillahirabbulalemin
 // Ve salatu ve selamu ala resulina Muhammedin 
 // Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
@@ -8,9 +8,9 @@
 // Estağfirullah El-Azim
 // La ilahe illallah, Muhammedur Resulullah
 import React from 'react'
-import Mmavahi from './mmavahi/ForYouFeed'
-import Mmhewcedari from './mmhewcedari/ForYouFeed'
-import Mmkargeh from './mmkargeh/ForYouFeed'
+import Mmavahi from './web/ForYouFeed'
+import Mmhewcedari from './mobil/ForYouFeed'
+import Mmkargeh from './jiriyasuni/ForYouFeed'
 
 function page() {
   return (
@@ -26,10 +26,10 @@ function page() {
               alt="Build Your Website"
               className="w-full h-32 object-cover rounded-t-lg mb-4"
             />
-            <h3 className="text-xl font-bold mb-2"> Website ya  xwe çêkin</h3>
+            <h3 className="text-xl font-bold mb-2">Build Your Website</h3>
             <p className="text-gray-600">Build your website with our easy-to-use templates.</p>
-            <a href="/malper/" className="text-blue-500 hover:underline mt-4 block">
-              
+            <a href="/malper/web" className="text-blue-500 hover:underline mt-4 block">
+              View Templates and Start Building
             </a>
           </div>
 
@@ -42,7 +42,7 @@ function page() {
             />
             <h3 className="text-xl font-bold mb-2">Have Your Mobile App </h3>
             <p className="text-gray-600">See how easy it is to build mobile apps with our platform.</p>
-            <a href="/malper/mmavahi/mmmobile" className="text-blue-500 hover:underline mt-4 block">
+            <a href="/malper/mobil" className="text-blue-500 hover:underline mt-4 block">
               Take a Look at Our Mobile App Solutions
             </a>
           </div>
@@ -54,10 +54,10 @@ function page() {
               alt="AI Solutions"
               className="w-full h-32 object-cover rounded-t-lg mb-4"
             />
-            <h3 className="text-xl font-bold mb-2">Get ai solutions</h3>
+            <h3 className="text-xl font-bold mb-2">Sepanên AI çêbikin</h3>
             <p className="text-gray-600"> Get AI solutions tailored to your needs.</p>
-            <a href="/malper/mmavahi/mmai" className="text-blue-500 hover:underline mt-4 block">
-              Explore Our AI Solutions
+            <a href="/malper/jiriyasuni" className="text-blue-500 hover:underline mt-4 block">
+              Zêdetir bibînin 
             </a>
           </div>
         </div>

@@ -1,6 +1,6 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirrabbulalemin
-// Esselatu vesselamu ala seyyidina Muhammedin 
+// Esselatu vesselamu ala seyyidina Muhammedin ve ala alihi ve sahbihi ecmain
 // Subhanallah, Elhamdulillah, Allahu Ekber
 // La ilahe illallah 
 // Allahu Ekber, Allahu Ekber, Allahu Ekber, La ilahe illallah
@@ -11,9 +11,10 @@
 import { PrismaAdapter } from "@lucia-auth/adapter-prisma";
 import { Google } from "arctic";
 import { Lucia, Session, User } from "lucia";
+import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { cache } from "react";
-import prisma from "./lib/prisma";
+import prisma from "@/pirtukxane/prisma";
 
 const adapter = new PrismaAdapter(prisma.session, prisma.user);
 
@@ -31,10 +32,8 @@ export const lucia = new Lucia(adapter, {
       displayName: databaseUserAttributes.displayName,
       avatarUrl: databaseUserAttributes.avatarUrl,
       googleId: databaseUserAttributes.googleId,
-      // role is pulled from the database user record. Values should be added
-      // via a Prisma migration (e.g. Role enum). Default role can be
-      // 'BIKARHENER' (regular user) or 'REVEBIR' (admin/manager).
-      role: (databaseUserAttributes as any).role,
+      role: databaseUserAttributes.role,
+      disabled: databaseUserAttributes.disabled,
     };
   },
 });
@@ -52,9 +51,8 @@ interface DatabaseUserAttributes {
   displayName: string;
   avatarUrl: string | null;
   googleId: string | null;
-  // role stored in the database (e.g. an enum). May be undefined until you
-  // run the Prisma migration to add the role column.
   role?: string | null;
+  disabled?: boolean | null;
 }
 
 export const google = new Google(
@@ -100,3 +98,26 @@ export const validateRequest = cache(
     return result;
   },
 );
+
+// Require that the request is authenticated. Returns NextResponse (401) when not.
+export const requireAuth = cache(async () => {
+  const result = await validateRequest();
+  if (!result.user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  return result;
+});
+
+// Require the caller to be an ADMIN. Returns NextResponse (401 or 403) when unauthorized/forbidden.
+export const requireAdmin = cache(async () => {
+  const result = await validateRequest();
+  if (!result.user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  // role is added to user attributes via getUserAttributes
+  const role = (result.user as any).role ?? "USER";
+  if (role !== "ADMIN") {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+  return true;
+});

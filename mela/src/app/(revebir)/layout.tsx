@@ -8,7 +8,7 @@
 // Hasbunallahu ve ni'mel vekil
 // La havle ve la kuvvete illa billahil aliyyil azim
 
-import { validateRequest } from "@/auth";
+import { requireAdmin } from "@/auth";
 import { redirect } from "next/navigation";
 import MenuBar from "./MenuBar";
 import Navbar from "./Navbar";
@@ -21,12 +21,16 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await validateRequest();
+  const adminCheck = await requireAdmin();
 
-  if (!session.user) redirect("/malper");
+  // requireAdmin returns `true` when caller is ADMIN, otherwise a NextResponse-like value
+  if (adminCheck !== true) {
+    // not authorized - redirect to public site
+    redirect("/bikarheneren");
+  }
 
   return (
-    <SessionProvider value={session}>
+  <SessionProvider value={{ user: (null as any), session: (null as any) }}>
       <div
         className="flex min-h-screen flex-col"
         style={{ backgroundColor: "#22c55e" /* Tailwind'in green-500 tonu, beyazla uyumlu canlı bir yeşil */ }}
