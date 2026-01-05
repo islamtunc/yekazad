@@ -5,7 +5,7 @@
 // Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin
 "use client";
 
-import { useSession } from "@/app/(navin)/SessionProvider";
+import { useSession } from "@/app/(revebir)/SessionProvider";
 import { RobotikData } from "@/pirtukxane/types";
 import { cn, formatRelativeDate } from "@/pirtukxane/utils";
 import { Media } from "@prisma/client";

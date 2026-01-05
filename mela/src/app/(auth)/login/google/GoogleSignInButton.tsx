@@ -1,4 +1,4 @@
-import { Button } from "@/hemanen/ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function GoogleSignInButton() {
   return (

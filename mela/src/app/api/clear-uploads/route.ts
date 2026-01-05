@@ -8,7 +8,7 @@
 
 
 
-import prisma from "@/pirtukxane/prisma";
+import prisma from "@/lib/prisma";
 import { UTApi } from "uploadthing/server";
 
 export async function GET(req: Request) {

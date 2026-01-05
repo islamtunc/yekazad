@@ -3,8 +3,8 @@
 
 
 import { validateRequest } from "@/auth";
-import prisma from "@/pirtukxane/prisma";
-import { getUserDataSelect } from "@/pirtukxane/types";
+import prisma from "@/lib/prisma";
+import { getUserDataSelect } from "@/lib/types";
 
 export async function GET(
   req: Request,

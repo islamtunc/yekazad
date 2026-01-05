@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import LoginForm from "./LoginForm";
-import { Button } from "@/hemanen/ui/button";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Giriş Yap",

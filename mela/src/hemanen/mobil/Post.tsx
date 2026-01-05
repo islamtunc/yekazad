@@ -6,7 +6,7 @@
 
 "use client";
 
-import { useSession } from "@/app/(navin)/SessionProvider";
+import { useSession } from "@/app/(revebir)/SessionProvider";
 import { MobilData } from "@/pirtukxane/types";
 import { cn, formatRelativeDate } from "@/pirtukxane/utils";
 import { Media } from "@prisma/client";

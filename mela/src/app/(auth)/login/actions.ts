@@ -1,14 +1,8 @@
-// Bismillahirrahmanirrahim 
-// Elhamdulillahi Rabbil Alamin
-// Essalatu vesselamu ala Resulina Muhammedin 
-// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
-// Subhanallah, Elhamdulillah, Allahu Ekber
-
 "use server";
 
 import { lucia } from "@/auth";
-import prisma from "@/pirtukxane/prisma";
-import { loginSchema, LoginValues } from "@/pirtukxane/validation";
+import prisma from "@/lib/prisma";
+import { loginSchema, LoginValues } from "@/lib/validation";
 import { verify } from "@node-rs/argon2";
 import { isRedirectError } from "next/dist/client/components/redirect";
 import { cookies } from "next/headers";
@@ -56,10 +50,7 @@ export async function login(
       sessionCookie.attributes,
     );
 
-    // Redirect based on role: admins -> "/", regular users -> "/bikarhn"
-        const isAdmin = existingUser.role === "ADMIN";
-    
-        return redirect(isAdmin ? "/" : "/");
+    return redirect("/");
   } catch (error) {
     if (isRedirectError(error)) throw error;
     console.error(error);

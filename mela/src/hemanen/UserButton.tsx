@@ -8,7 +8,7 @@
 "use client";
 
 import { logout } from "@/app/(auth)/actions";
-import { useSession } from "@/app/(navin)/SessionProvider";
+import { useSession } from "@/app/(revebir)/SessionProvider";
 import { cn } from "@/pirtukxane/utils";
 import { useQueryClient } from "@tanstack/react-query";
 import { Check, LogOutIcon, Monitor, Moon, Sun, UserIcon } from "lucide-react";
@@ -34,7 +34,6 @@ interface UserButtonProps {
 
 export default function UserButton({ className }: UserButtonProps) {
   const { user } = useSession();
-  const username = (user as any)?.username ?? "";
 
   const { theme, setTheme } = useTheme();
 
@@ -44,13 +43,13 @@ export default function UserButton({ className }: UserButtonProps) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button className={cn("flex-none rounded-full", className)}>
-          <UserAvatar avatarUrl={(user as any)?.avatarUrl} size={40} />
+          <UserAvatar avatarUrl={user.avatarUrl} size={40} />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-  <DropdownMenuLabel>Logged in as @{username}</DropdownMenuLabel>
+        <DropdownMenuLabel>Logged in as @{user.username}</DropdownMenuLabel>
         <DropdownMenuSeparator />
-  <Link href={`/users/${username}`}>
+        <Link href={`/users/${user.username}`}>
           <DropdownMenuItem>
             <UserIcon className="mr-2 size-4" />
             Profila We
