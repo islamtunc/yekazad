@@ -4,84 +4,118 @@
 // SuphanAllahi wa bihamdihi, subhanallahil azim
 // La hawla wa la quwwata illa billahi al 'aliyyil azim
 // la ilaha illallahu wahdahu la sharika lahu, lahul mulku wa lahul hamdu wa huwa 'ala kulli shay'in qadir
-import * as THREE from "https://unpkg.com/three@0.160.1/build/three.module.js";
+const THREE_CDN_URLS = [
+  "https://unpkg.com/three@0.160.1/build/three.module.js",
+  "https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js",
+  "https://esm.sh/three@0.160.1",
+];
 
-const canvas = document.getElementById("scene");
-const statusEl = document.getElementById("status");
-const helpPanel = document.getElementById("helpPanel");
-const helpToggle = document.getElementById("helpToggle");
-const webglError = document.getElementById("webglError");
-
-const playBtn = document.getElementById("playBtn");
-const solveBtn = document.getElementById("solveBtn");
-const exitBtn = document.getElementById("exitBtn");
-
-if (!canvas) {
-  throw new Error("Canvas element not found.");
-}
-
-const gl =
-  canvas.getContext("webgl2") ||
-  canvas.getContext("webgl") ||
-  canvas.getContext("experimental-webgl");
-if (!gl) {
-  const ctx2d = canvas.getContext("2d");
-  statusEl.textContent = "WebGL tuneye. Nîşandana 2D tê bikaranîn.";
-  webglError.classList.remove("hidden");
-
-  const drawFallback = () => {
-    const { width, height } = canvas.getBoundingClientRect();
-    if (!width || !height || !ctx2d) {
-      return;
+async function loadThree() {
+  let lastError;
+  for (const url of THREE_CDN_URLS) {
+    try {
+      return await import(url);
+    } catch (error) {
+      lastError = error;
     }
-    canvas.width = Math.floor(width * (window.devicePixelRatio || 1));
-    canvas.height = Math.floor(height * (window.devicePixelRatio || 1));
-    ctx2d.setTransform(window.devicePixelRatio || 1, 0, 0, window.devicePixelRatio || 1, 0, 0);
-
-    ctx2d.clearRect(0, 0, width, height);
-    ctx2d.fillStyle = "rgba(12, 18, 32, 0.6)";
-    ctx2d.fillRect(0, 0, width, height);
-
-    const size = Math.min(width, height) * 0.35;
-    const x = width * 0.5;
-    const y = height * 0.55;
-    const offset = size * 0.35;
-
-    ctx2d.strokeStyle = "#e8edf7";
-    ctx2d.lineWidth = 2;
-    ctx2d.beginPath();
-    ctx2d.rect(x - size * 0.5, y - size * 0.5, size, size);
-    ctx2d.stroke();
-
-    ctx2d.beginPath();
-    ctx2d.rect(x - size * 0.5 + offset, y - size * 0.5 - offset, size, size);
-    ctx2d.stroke();
-
-    ctx2d.beginPath();
-    ctx2d.moveTo(x - size * 0.5, y - size * 0.5);
-    ctx2d.lineTo(x - size * 0.5 + offset, y - size * 0.5 - offset);
-    ctx2d.moveTo(x + size * 0.5, y - size * 0.5);
-    ctx2d.lineTo(x + size * 0.5 + offset, y - size * 0.5 - offset);
-    ctx2d.moveTo(x - size * 0.5, y + size * 0.5);
-    ctx2d.lineTo(x - size * 0.5 + offset, y + size * 0.5 - offset);
-    ctx2d.moveTo(x + size * 0.5, y + size * 0.5);
-    ctx2d.lineTo(x + size * 0.5 + offset, y + size * 0.5 - offset);
-    ctx2d.stroke();
-  };
-
-  window.addEventListener("resize", () => requestAnimationFrame(drawFallback));
-  requestAnimationFrame(drawFallback);
-  return;
+  }
+  throw lastError || new Error("Unable to load Three.js.");
 }
 
-webglError.classList.add("hidden");
+async function boot() {
+  const canvas = document.getElementById("scene");
+  const statusEl = document.getElementById("status");
+  const helpPanel = document.getElementById("helpPanel");
+  const helpToggle = document.getElementById("helpToggle");
+  const webglError = document.getElementById("webglError");
 
-const renderer = new THREE.WebGLRenderer({ canvas, context: gl, antialias: true, alpha: true });
+  const playBtn = document.getElementById("playBtn");
+  const solveBtn = document.getElementById("solveBtn");
+  const exitBtn = document.getElementById("exitBtn");
+
+  if (!canvas) {
+    throw new Error("Canvas element not found.");
+  }
+
+  let THREE;
+  try {
+    THREE = await loadThree();
+    window.__appReady = true;
+  } catch (error) {
+    if (webglError) {
+      webglError.classList.remove("hidden");
+      webglError.textContent =
+        "Script nehat barkirin. CDN (unpkg/jsdelivr/esm) girtî ye an jî internet tune. Ji kerema xwe VPN an local serverê şopîne, an jî Three.js bi local file bîne.";
+    }
+    if (statusEl) {
+      statusEl.textContent = "Three.js nehat barkirin. Internet pêdivî ye.";
+    }
+    return;
+  }
+
+  const gl =
+    canvas.getContext("webgl2") ||
+    canvas.getContext("webgl") ||
+    canvas.getContext("experimental-webgl");
+  if (!gl) {
+    const ctx2d = canvas.getContext("2d");
+    statusEl.textContent = "WebGL tuneye. Nîşandana 2D tê bikaranîn.";
+    webglError.classList.remove("hidden");
+
+    const drawFallback = () => {
+      const { width, height } = canvas.getBoundingClientRect();
+      if (!width || !height || !ctx2d) {
+        return;
+      }
+      canvas.width = Math.floor(width * (window.devicePixelRatio || 1));
+      canvas.height = Math.floor(height * (window.devicePixelRatio || 1));
+      ctx2d.setTransform(window.devicePixelRatio || 1, 0, 0, window.devicePixelRatio || 1, 0, 0);
+
+      ctx2d.clearRect(0, 0, width, height);
+      ctx2d.fillStyle = "rgba(12, 18, 32, 0.6)";
+      ctx2d.fillRect(0, 0, width, height);
+
+      const size = Math.min(width, height) * 0.35;
+      const x = width * 0.5;
+      const y = height * 0.55;
+      const offset = size * 0.35;
+
+      ctx2d.strokeStyle = "#e8edf7";
+      ctx2d.lineWidth = 2;
+      ctx2d.beginPath();
+      ctx2d.rect(x - size * 0.5, y - size * 0.5, size, size);
+      ctx2d.stroke();
+
+      ctx2d.beginPath();
+      ctx2d.rect(x - size * 0.5 + offset, y - size * 0.5 - offset, size, size);
+      ctx2d.stroke();
+
+      ctx2d.beginPath();
+      ctx2d.moveTo(x - size * 0.5, y - size * 0.5);
+      ctx2d.lineTo(x - size * 0.5 + offset, y - size * 0.5 - offset);
+      ctx2d.moveTo(x + size * 0.5, y - size * 0.5);
+      ctx2d.lineTo(x + size * 0.5 + offset, y - size * 0.5 - offset);
+      ctx2d.moveTo(x - size * 0.5, y + size * 0.5);
+      ctx2d.lineTo(x - size * 0.5 + offset, y + size * 0.5 - offset);
+      ctx2d.moveTo(x + size * 0.5, y + size * 0.5);
+      ctx2d.lineTo(x + size * 0.5 + offset, y + size * 0.5 - offset);
+      ctx2d.stroke();
+    };
+
+    window.addEventListener("resize", () => requestAnimationFrame(drawFallback));
+    requestAnimationFrame(drawFallback);
+    return;
+  }
+
+  webglError.classList.add("hidden");
+
+  const renderer = new THREE.WebGLRenderer({ canvas, context: gl, antialias: true, alpha: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
 camera.position.set(3.2, 2.8, 3.2);
+camera.lookAt(0, 0, 0);
 
 const ambient = new THREE.AmbientLight(0xffffff, 0.7);
 const dir = new THREE.DirectionalLight(0xffffff, 0.8);
@@ -125,8 +159,8 @@ function resize() {
   camera.updateProjectionMatrix();
 }
 
-window.addEventListener("resize", () => requestAnimationFrame(resize));
-requestAnimationFrame(resize);
+  window.addEventListener("resize", () => requestAnimationFrame(resize));
+  requestAnimationFrame(resize);
 
 let lastTime = 0;
 function animate(time = 0) {
@@ -142,26 +176,29 @@ function animate(time = 0) {
   requestAnimationFrame(animate);
 }
 
-requestAnimationFrame(animate);
+  requestAnimationFrame(animate);
 
-playBtn.addEventListener("click", () => {
-  running = !running;
-  statusEl.textContent = running ? "Blîze: hereketê dest pê kir." : "Blîze: wisa rawestî.";
-  playBtn.textContent = running ? "Blîze" : "Rawestîne";
-});
+  playBtn.addEventListener("click", () => {
+    running = !running;
+    statusEl.textContent = running ? "Blîze: hereketê dest pê kir." : "Blîze: wisa rawestî.";
+    playBtn.textContent = running ? "Blîze" : "Rawestîne";
+  });
 
-solveBtn.addEventListener("click", () => {
-  cubeGroup.rotation.set(0, 0, 0);
-  statusEl.textContent = "Çêbike: cube bi şiklê dest pê hat vegerandin.";
-});
+  solveBtn.addEventListener("click", () => {
+    cubeGroup.rotation.set(0, 0, 0);
+    statusEl.textContent = "Çêbike: cube bi şiklê dest pê hat vegerandin.";
+  });
 
-exitBtn.addEventListener("click", () => {
-  statusEl.textContent = "Derkeve: ji webê derçûyî (pêdivî ye tab bibîxî).";
-});
+  exitBtn.addEventListener("click", () => {
+    statusEl.textContent = "Derkeve: ji webê derçûyî (pêdivî ye tab bibîxî).";
+  });
 
-helpToggle.addEventListener("click", () => {
-  helpPanel.classList.toggle("hidden");
-});
+  helpToggle.addEventListener("click", () => {
+    helpPanel.classList.toggle("hidden");
+  });
+}
+
+boot();
 // Elhamdulîllahi rabbil 'alemin-i Kuddus-i Rezzak-i Rahman-i Rahim-i Melik-i Mülk-i Hamid-i Muhyi ve Mumit-i Azim-i Celil-i Rabbil 'alemin-i Ekrem 
 // Elhamdulîllahi rabbil 'alemin 
 // Elhamdulîllahi rabbil 'alemin

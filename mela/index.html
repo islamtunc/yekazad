@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rubik Cube - Web</title>
     <link rel="stylesheet" href="style.css" />
-    <script type="module" src="app.js"></script>
+  <script type="module" src="app.js"></script>
   </head>
   <body>
     <div class="app">
@@ -50,6 +50,23 @@
         <button class="danger" id="exitBtn">Derkeve</button>
       </footer>
     </div>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const errorEl = document.getElementById("webglError");
+        const statusEl = document.getElementById("status");
+        if (!errorEl) return;
+
+        setTimeout(() => {
+          if (window.__appReady) return;
+          errorEl.classList.remove("hidden");
+          errorEl.textContent =
+            "Script nehat barkirin. Ji kerema xwe bi local server (http://localhost:...) vebike da module bi rastî bibe. Heke ew dîsa nêdît, browserê nû binihêre.";
+          if (statusEl) {
+            statusEl.textContent = "App nehat barkirin. Têkildarî local server pêdivî ye.";
+          }
+        }, 1500);
+      });
+    </script>
   </body>
 </html>
 <!-- Elhamdulîllahi rabbil 'alemin-i Kuddus-i Rezzak-i Rahman-i Rahim-i Melik-i Mülk-i Hamid-i Muhyi ve Mumit-i Azim-i Celil-i Rabbil 'alemin-i Ekrem 

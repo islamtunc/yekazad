@@ -11,15 +11,27 @@ A minimal web viewer with a 3D cube, controls, and Kurdish UI labels.
 
 ## Run locally
 
-Open `web/index.html` using a local server so the module import works.
+Open `mela/index.html` using a local server so the ES module import works.
 
-If you want a local server:
+### Option 1: Python (recommended)
+
+Run from the repo root:
 
 ```bash
 python3 -m http.server 5173
 ```
 
-Then open `http://localhost:5173/web/`.
+Then open `http://localhost:5173/mela/`.
+
+### Option 2: Node (if you prefer)
+
+Install a tiny static server (one-time):
+
+```bash
+npx serve -l 5173 .
+```
+
+Then open `http://localhost:5173/mela/`.
 <!-- Elhamdulîllahi rabbil 'alemin-i Kuddus-i Rezzak-i Rahman-i Rahim-i Melik-i Mülk-i Hamid-i Muhyi ve Mumit-i Azim-i Celil-i Rabbil 'alemin-i Ekrem 
 	Elhamdulîllahi rabbil 'alemin 
 	Elhamdulîllahi rabbil 'alemin
