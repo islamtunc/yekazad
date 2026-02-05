@@ -16,7 +16,14 @@ const playBtn = document.getElementById("playBtn");
 const solveBtn = document.getElementById("solveBtn");
 const exitBtn = document.getElementById("exitBtn");
 
-const gl = canvas.getContext("webgl2") || canvas.getContext("webgl");
+if (!canvas) {
+  throw new Error("Canvas element not found.");
+}
+
+const gl =
+  canvas.getContext("webgl2") ||
+  canvas.getContext("webgl") ||
+  canvas.getContext("experimental-webgl");
 if (!gl) {
   const ctx2d = canvas.getContext("2d");
   statusEl.textContent = "WebGL tuneye. Nîşandana 2D tê bikaranîn.";
@@ -66,6 +73,8 @@ if (!gl) {
   requestAnimationFrame(drawFallback);
   return;
 }
+
+webglError.classList.add("hidden");
 
 const renderer = new THREE.WebGLRenderer({ canvas, context: gl, antialias: true, alpha: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
