@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bîsmîllahîrrahmânîrrahîm -->
+<!-- Elhamdulillahi rabbil 'alamin -->
+<!-- Esselatu ve selamû ala Rasûlina Muhammedin -->
+<!-- SUPHANALLAHI VELHAMDULILLAHİ VE LA ILAHE ILLALLAHU -->
+<!-- VE KUDDUS-U EKREM-I VEHHAB ALLAHU EKBER -->
+<!-- ALLAHU EKBER ALLAHU EKBER LA İLAHE İLLALLAHU ALLAHU EKBER -->
+<!-- ALLAHU EKBER VE LİLLAHİL HAMD -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEFF1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Sernavê (Başlık) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_sereke"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/binsereke"
+            android:textSize="16sp"
+            android:textColor="#424242"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Peyama (Mesaj) -->
+        <TextView
+            android:id="@+id/peyamaNivis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/peyama_destpek"
+            android:textSize="18sp"
+            android:textColor="#2E7D32"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="#E8F5E9"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Dîmena Kupa Rubik (3x3 Grid) -->
+        <GridLayout
+            android:id="@+id/rubikGrid"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:padding="8dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Butona Guherandina Hevok (Yüz Değiştir Butonu) -->
+        <Button
+            android:id="@+id/butonaHevokGuherine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hevok_guherine"
+            android:textSize="16sp"
+            android:backgroundTint="#673AB7"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"/>
+
+        <!-- Bişkokên Zivirînê (Döndürme Butonları) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zivirîna_hevokan"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            android:layout_marginBottom="12dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/butonaJor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:text="@string/jor"
+                android:backgroundTint="#90CAF9"
+                android:textColor="#000000"/>
+
+            <Button
+                android:id="@+id/butonaJer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:text="@string/jer"
+                android:backgroundTint="#FFF176"
+                android:textColor="#000000"/>
+
+            <Button
+                android:id="@+id/butonaPes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:text="@string/pes"
+                android:backgroundTint="#EF5350"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/butonaPase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:text="@string/pase"
+                android:backgroundTint="#FFB74D"
+                android:textColor="#000000"/>
+
+            <Button
+                android:id="@+id/butonaRast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:text="@string/rast"
+                android:backgroundTint="#81C784"
+                android:textColor="#000000"/>
+
+            <Button
+                android:id="@+id/butonaCep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:text="@string/cep"
+                android:backgroundTint="#64B5F6"
+                android:textColor="#000000"/>
+
+        </GridLayout>
+
+        <!-- Bişkokên Gişti (Genel Butonlar) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kontrolen_gisti"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/butonaTevlihev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tevlihevkirin"
+            android:textSize="16sp"
+            android:backgroundTint="#9C27B0"
+            android:textColor="#FFFFFF"
+            android:layout_margin="4dp"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/butonaRijinKirin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rijinkirin"
+            android:textSize="16sp"
+            android:backgroundTint="#FF5722"
+            android:textColor="#FFFFFF"
+            android:layout_margin="4dp"
+            android:padding="12dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

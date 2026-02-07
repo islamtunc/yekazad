@@ -1,0 +1,46 @@
+<!-- Bîsmîllahîrrahmânîrrahîm -->
+<!-- Elhamdulillahi rabbil 'alamin -->
+<!-- Esselatu ve selamû ala Rasûlina Muhammedin -->
+<!-- SUPHANALLAHI VELHAMDULILLAHİ VE LA ILAHE ILLALLAHU -->
+<!-- VE KUDDUS-U EKREM-I VEHHAB ALLAHU EKBER -->
+<!-- ALLAHU EKBER ALLAHU EKBER LA İLAHE İLLALLAHU ALLAHU EKBER -->
+<!-- ALLAHU EKBER VE LİLLAHİL HAMD -->
+
+<resources>
+    <string name="app_name">Kupa Rubik - کوپا ڕووبیک</string>
+    
+    <!-- Sernavên Sereke (Ana Başlıklar) -->
+    <string name="nav_sereke">Kupa Rubik bi Kurdî</string>
+    <string name="binsereke">کوپا ڕووبیک بە کوردی\n3x3x3 C++ Native</string>
+    
+    <!-- Peyam (Mesajlar) -->
+    <string name="peyama_destpek">Bi xêr hatî! Dest pê bike! (Hoş geldin! Başla!)</string>
+    <string name="peyama_careser">Pîroz be! Kup çareser bû! 🎉</string>
+    <string name="peyama_berdewam">Berdewam be... (Devam et...)</string>
+    
+    <!-- Navên Hevokan (Yüz Adları) -->
+    <string name="jor">↑ Jor (Üst - سەرەوە)</string>
+    <string name="jer">↓ Jêr (Alt - خوارەوە)</string>
+    <string name="pes">→ Pêş (Ön - پێشەوە)</string>
+    <string name="pase">← Paşe (Arka - دواوە)</string>
+    <string name="rast">→ Rast (Sağ - ڕاست)</string>
+    <string name="cep">← Çep (Sol - چەپ)</string>
+    
+    <!-- Kontrolên (Kontroller) -->
+    <string name="zivirîna_hevokan">Zivirîna Hevokan (Yüzleri Döndür)</string>
+    <string name="kontrolen_gisti">Kontrolên Giştî (Genel Kontroller)</string>
+    <string name="tevlihevkirin">🔀 Tevlihevkirin (Karıştır)</string>
+    <string name="rijinkirin">🔄 Rijîn Kirin (Sıfırla)</string>
+    <string name="hevok_guherine">👁️ Hevokê Biguherîne (Yüzü Değiştir)</string>
+    
+    <!-- Rengên (Renkler) -->
+    <string name="spî">Spî (Beyaz - سپی)</string>
+    <string name="zer">Zer (Sarı - زەرد)</string>
+    <string name="sor">Sor (Kırmızı - سور)</string>
+    <string name="pirteqal">Pirteqal (Turuncu - پرتەقاڵی)</string>
+    <string name="kesk">Kesk (Yeşil - کەسک)</string>
+    <string name="sin">Şîn (Mavi - شین)</string>
+    
+    <!-- Bismillah -->
+    <string name="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</string>
+</resources>
